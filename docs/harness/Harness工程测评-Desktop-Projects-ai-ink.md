@@ -155,6 +155,7 @@
 | V2 规划与修订记录 | `docs/harness/HARNESS_V2_PLAN.md` |
 | P0 验收单（勾选与 Actions 说明） | `docs/harness/HARNESS_V2_P0_ACCEPTANCE.md` |
 | 本目录索引 | `docs/harness/README.md` |
+| 工作区 Harness 任务单（`active` / `done`） | `docs/harness/tasks/`（见 `docs/harness/tasks/README.md`） |
 
 **结论表（§6）更新口径**：Ink 前后端 **Verify** 由「弱 / 中」提升为「**PR 上具备默认 pytest / lint+build 背压**」，与 `HARNESS_V2_PLAN.md` **§4 P1**（前端单测、统一 checklist 扩面）仍属后续。
 

@@ -14,7 +14,7 @@
 | **后端 CI** | `ai-ink-brain-api-python/.github/workflows/pytest.yml`，workflow 名 **`pytest`**：`pytest tests -m "not intent_eval and not intent_benchmark"`；同上触发；CI `env` 为 dummy Key + 澄清/意图评测闸关闭，与 `tests/conftest.py` 意图一致。 |
 | **规划与索引** | `docs/harness/HARNESS_V2_PLAN.md`（§4 P0 已标为已实现）、`docs/harness/README.md`、根 `AGENTS.md` §8。 |
 | **测评对照** | `docs/harness/Harness工程测评-Desktop-Projects-ai-ink.md` **§8**、§7 附录表已增上述 workflow 路径。 |
-| **任务单规范** | `ai-ink-brain/content/tasks/README.md`、`ai-ink-brain-api-python/docs/tasks/README.md` 已链 **`HARNESS_V2_PLAN.md` §5**（`test_strategy` / `failure_paths` 等）。 |
+| **任务单规范** | **工作区**：`docs/harness/tasks/README.md`；**子仓**：`ai-ink-brain/content/tasks/README.md`、`ai-ink-brain-api-python/docs/tasks/README.md` — 均已链 **`HARNESS_V2_PLAN.md` §5**（`test_strategy` / `failure_paths` 等）；**Harness 跨仓任务**以 `docs/harness/tasks/` 为准。 |
 
 ---
 

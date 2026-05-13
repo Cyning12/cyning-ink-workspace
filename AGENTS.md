@@ -1,7 +1,7 @@
-# 工作区总调度（Projects / 多子仓）
+# 工作区总调度（cyning-ink-workspace / 多子仓）
 
 > **用途**：给「总 Agent」与「子 Agent」划定边界、阅读顺序与跨仓协作入口。  
-> **范围**：`/Users/cyning/Desktop/Projects` 下当前五个子目录；本文件不替代各仓内的规则文件（`.cursor/rules/*.mdc`）与项目配置真值表。  
+> **范围**：**工作区根**（建议本地目录名 **`cyning-ink-workspace`**）下当前五个子目录；本文件不替代各仓内的规则文件（`.cursor/rules/*.mdc`）与项目配置真值表。  
 > **语言**：说明以简体中文为主；代码与专有名词保持英文。  
 > **新增权威规范**：全仓库统一采用 `_tech_graph/` 技术图谱作为架构与流程唯一可信来源。
 
@@ -32,7 +32,7 @@
 
 ### 2.2 任务文档保存位置
 
-| 子项目 | 任务目录（相对 `Projects/`） | 命名建议 |
+| 子项目 | 任务目录（相对工作区根） | 命名建议 |
 |--------|------------------------------|----------|
 | 前端 Ink-Brain | `ai-ink-brain/content/tasks/active/`（归档：`content/tasks/done/`） | `task_<主题简写>.md`；规则见 `content/tasks/README.md` |
 | 后端 API Python | `ai-ink-brain-api-python/docs/tasks/` | `*.md` |
