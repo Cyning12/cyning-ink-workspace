@@ -1,7 +1,7 @@
 # Harness V2 · P0（Verify）验收单
 
 > **用途**：记录已落地改动与 **人工/流程验收** 勾选项，便于归档或 PR 说明引用。  
-> **范围**：Ink 全栈 **P0 = PR 上默认质量门**（前端 lint+build、后端 pytest）；不含 P1 前端单测扩面等后续项。  
+> **范围**：Ink 全栈 **P0 = PR 上默认质量门**（前端 lint+test+build、后端 pytest）；**P1（2026-05-13）** 起前端 **`quality`** 同步纳入 **`pnpm test`**，本节 §1/§3/§6 与 `HARNESS_V2_PLAN.md` §4 对齐维护。  
 > **真值**：实现以各子仓 `.github/workflows/*.yml` 与代码为准；本单为验收视图。
 
 ---
@@ -10,7 +10,7 @@
 
 | 子项 | 说明 |
 |------|------|
-| **前端 CI** | `ai-ink-brain/.github/workflows/quality.yml`，workflow 名 **`quality`**：`pnpm install --frozen-lockfile` → `pnpm lint` → `pnpm build`；触发分支 **`main`**、**`production`**；`pull_request` 与 `push`。 |
+| **前端 CI** | `ai-ink-brain/.github/workflows/quality.yml`，workflow 名 **`quality`**，job **`lint-and-build`**：`pnpm install --frozen-lockfile` → `pnpm lint` → **`pnpm test`**（step **Test**，Vitest）→ `pnpm build`；触发分支 **`main`**、**`production`**；`pull_request` 与 `push`。 |
 | **后端 CI** | `ai-ink-brain-api-python/.github/workflows/pytest.yml`，workflow 名 **`pytest`**：`pytest tests -m "not intent_eval and not intent_benchmark"`；同上触发；CI `env` 为 dummy Key + 澄清/意图评测闸关闭，与 `tests/conftest.py` 意图一致。 |
 | **规划与索引** | `docs/harness/HARNESS_V2_PLAN.md`（§4 P0 已标为已实现）、`docs/harness/README.md`、根 `AGENTS.md` §8。 |
 | **测评对照** | `docs/harness/Harness工程测评-Desktop-Projects-ai-ink.md` **§8**、§7 附录表已增上述 workflow 路径。 |
@@ -32,7 +32,7 @@
 **前端**（在 `ai-ink-brain/` 根目录；无 TTY 时需 `CI=true`，与 pnpm 在 CI 中的行为一致）：
 
 ```bash
-CI=true pnpm install --frozen-lockfile && pnpm lint && pnpm build
+CI=true pnpm install --frozen-lockfile && pnpm lint && pnpm test && pnpm build
 ```
 
 **后端**（在 `ai-ink-brain-api-python/` 根目录）：须先导出与 **`.github/workflows/pytest.yml` `jobs.pytest.env`** 同名变量（尤其是 **`CHATBI_V3_LOW_CONFIDENCE_CLARIFY=false`**），否则本地会走「澄清短路」而 CI 不会，易出现用例误失败。
@@ -82,7 +82,7 @@ pytest tests -m "not intent_eval and not intent_benchmark" -q --tb=short
 |----|------|
 | **验收日期** | 2026-05-13 |
 | **验收人** | （本地） |
-| **前端 `quality` 最近一次** | **本地等价**：`CI=true pnpm install --frozen-lockfile && pnpm lint && pnpm build` 已通过（`pnpm lint` 含 1 条既有 `react-hooks/exhaustive-deps` warning，非 error）。GitHub Actions 上请以 **`quality`** workflow 最新绿色 run 为准并补链。 |
+| **前端 `quality` 最近一次** | **本地等价**：`CI=true pnpm install --frozen-lockfile && pnpm lint && pnpm test && pnpm build` 已通过（`pnpm lint` 含 1 条既有 `react-hooks/exhaustive-deps` warning，非 error）。GitHub Actions 上请以 **`quality`** workflow 最新绿色 run 为准并补链。 |
 | **后端 `pytest` 最近一次** | **本地等价**：对上表 `export` 后 `pytest tests -m "not intent_eval and not intent_benchmark"` **114 passed**。GitHub Actions 上请以 **`pytest`** workflow 最新绿色 run 为准并补链。 |
 | **备注** | GitHub 侧：仓库 **Settings → Actions** 需启用；workflow 已随各子仓 `.github/workflows/*.yml` 落盘，无需在网页重复「创建」同名流水线。第 4 节勾选请在远端确认后人工更新。 |
 
@@ -94,6 +94,7 @@ pytest tests -m "not intent_eval and not intent_benchmark" -q --tb=short
 |------|------|
 | 2026-05-13 | 初版：P0 落地验收单，与 `HARNESS_V2_PLAN.md`、测评 §8 一致 |
 | 2026-05-13 | 第 3 节：对齐 `pytest.yml` 全量 `env`；补充 `CI=true`；第 6 节记录本地等价验收通过 |
+| 2026-05-13 | P1 对齐：`quality` 增 **`pnpm test`**；§1 前端 CI 描述与 §3 本地等价命令含 `pnpm test`；job 名 **`lint-and-build`** |
 
 ---
 
