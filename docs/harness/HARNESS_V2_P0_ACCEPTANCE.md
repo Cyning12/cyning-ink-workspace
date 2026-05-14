@@ -59,10 +59,10 @@ pytest tests -m "not intent_eval and not intent_benchmark" -q --tb=short
 
 ## 4. GitHub 侧验收（人工勾选）
 
-- [ ] 两子仓已 **push** 含上述 workflow 的提交到远端，且默认使用分支名与 `on.branches` 中 **`main` / `production`** 一致（若团队仅用 `master` 等，须改 workflow 或增加分支名）。
-- [ ] 组织/仓库 **Settings → Actions** 未禁用（私有仓常见「需管理员开启」）。
-- [ ] 在 **Actions** 页可看到 **`quality`**（前端仓）、**`pytest`**（后端仓）在 **PR** 与/或 **push** 上执行记录，且最近一条为 **绿色**（或与失败原因已登记、已修复）。
-- [ ] **分支保护规则**（若启用）：将上述 workflow 设为 **Required status checks**（可选，属流程加固）。
+- [x] 两子仓已 **push** 含上述 workflow 的提交到远端，且默认使用分支名与 `on.branches` 中 **`main` / `production`** 一致（若团队仅用 `master` 等，须改 workflow 或增加分支名）。**（2026-05-14 已确认）**
+- [x] 组织/仓库 **Settings → Actions** 未禁用（私有仓常见「需管理员开启」）。**（2026-05-14 已确认）**
+- [x] 在 **Actions** 页可看到 **`quality`**（前端仓）、**`pytest`**（后端仓）在 **PR** 与/或 **push** 上执行记录，且最近一条为 **绿色**（或与失败原因已登记、已修复）。**（2026-05-14：前后端 PR 已通过）**
+- [ ] **分支保护规则**（若启用）：将上述 workflow 设为 **Required status checks**（可选，属流程加固；未启用则保持未勾选）。
 
 ---
 
@@ -80,11 +80,17 @@ pytest tests -m "not intent_eval and not intent_benchmark" -q --tb=short
 
 | 项 | 内容 |
 |----|------|
-| **验收日期** | 2026-05-13 |
-| **验收人** | （本地） |
-| **前端 `quality` 最近一次** | **本地等价**：`CI=true pnpm install --frozen-lockfile && pnpm lint && pnpm test && pnpm build` 已通过（`pnpm lint` 含 1 条既有 `react-hooks/exhaustive-deps` warning，非 error）。GitHub Actions 上请以 **`quality`** workflow 最新绿色 run 为准并补链。 |
-| **后端 `pytest` 最近一次** | **本地等价**：对上表 `export` 后 `pytest tests -m "not intent_eval and not intent_benchmark"` **114 passed**。GitHub Actions 上请以 **`pytest`** workflow 最新绿色 run 为准并补链。 |
-| **备注** | GitHub 侧：仓库 **Settings → Actions** 需启用；workflow 已随各子仓 `.github/workflows/*.yml` 落盘，无需在网页重复「创建」同名流水线。第 4 节勾选请在远端确认后人工更新。 |
+| **验收日期** | 2026-05-14（GitHub 侧 PR 验收）；2026-05-13（本地等价命令，见上表） |
+| **验收人** | 维护者（工作区） |
+| **前端 `quality` 最近一次** | **GitHub（2026-05-14）**：`ai-ink-brain` 仓库 PR 上 **`quality`** 已通过。**本地等价**（2026-05-13）：`CI=true pnpm install --frozen-lockfile && pnpm lint && pnpm test && pnpm build` 已通过（`pnpm lint` 含 1 条既有 `react-hooks/exhaustive-deps` warning，非 error）。 |
+| **后端 `pytest` 最近一次** | **GitHub（2026-05-14）**：`ai-ink-brain-api-python` 仓库 PR 上 **`pytest`** 已通过。**本地等价**（2026-05-13）：对上表 `export` 后 `pytest tests -m "not intent_eval and not intent_benchmark"` **114 passed**。 |
+| **备注** | **P2 `verify-fast`**：按 [`VERIFICATION_CI_PATTERN.md`](VERIFICATION_CI_PATTERN.md) **推荐策略 1**，**不设为 Required**；合并前必绿仍以根 `AGENTS.md` §8 的 **`quality`** + **`pytest`**（及图谱类 workflow）为准。**Harness 工作区任务**：`docs/harness/tasks/active/` 当前无进行中专项；日常在前后端子仓任务单中落实 `test_strategy` / `failure_paths` 等（见 `HARNESS_V2_PLAN.md` §5、`docs/harness/tasks/README.md`「当前状态」）。 |
+
+### 6.1 运维结论摘要（2026-05-14）
+
+1. **前后端各自仓库**的 PR 上 **`quality`** / **`pytest`** 已跑通且通过。  
+2. **`verify-fast` 不作为 Required status check**，避免与 `quality` / `pytest` 重复计费；workflow 仍可保留供观察。  
+3. **无常驻「Harness-only」active 任务**时属正常；跨仓或改 CI/根文档时再于 `docs/harness/tasks/active/` 开 `task_*` 即可。
 
 ---
 
@@ -95,6 +101,7 @@ pytest tests -m "not intent_eval and not intent_benchmark" -q --tb=short
 | 2026-05-13 | 初版：P0 落地验收单，与 `HARNESS_V2_PLAN.md`、测评 §8 一致 |
 | 2026-05-13 | 第 3 节：对齐 `pytest.yml` 全量 `env`；补充 `CI=true`；第 6 节记录本地等价验收通过 |
 | 2026-05-13 | P1 对齐：`quality` 增 **`pnpm test`**；§1 前端 CI 描述与 §3 本地等价命令含 `pnpm test`；job 名 **`lint-and-build`** |
+| 2026-05-14 | §4 GitHub 侧前三项勾选；§6/§6.1：远端 PR 通过、`verify-fast` 不设 Required、Harness 任务收口至子仓日常 |
 
 ---
 

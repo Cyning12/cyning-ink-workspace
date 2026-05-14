@@ -60,6 +60,11 @@
 - **真值**：**合并前必绿**仍以 **`quality`** + **`pytest`**（及图谱 workflow）为准，直至维护者在 **Branch protection** 中显式改 Required 列表。  
 - **未**将 `verify-fast` 默认写为必绿，是为避免与 §3.1 冲突；若全量 Required 两套，须在团队内先达成计费与命名共识。
 
+### 5.1 团队选用结论（2026-05-14）
+
+- **已采用**上文 **推荐策略 1**：**Required** 仅 **`quality`**（前端仓）+ **`pytest`**（后端仓）及既有图谱类 workflow；**`verify-fast` 不设为 Required**。  
+- 书面验收与勾选见 [`HARNESS_V2_P0_ACCEPTANCE.md`](HARNESS_V2_P0_ACCEPTANCE.md) §6.1。
+
 ---
 
 ## 6. 首跑与本地等价
@@ -71,6 +76,14 @@
 
 ---
 
-## 7. 给 Cursor
+## 7. 修订记录
+
+| 日期 | 摘要 |
+|------|------|
+| 2026-05-14 | 增补 **§5.1** 团队选用结论（`verify-fast` 不设 Required；与 P0 验收单 §6.1 对齐） |
+
+---
+
+## 8. 给 Cursor
 
 `Harness`、`Verify`、`verification`、`workflow`、`verify-fast`、`quality`、`pytest`、`分支保护`、`HARNESS_V2_PLAN` §4 P2、`docs/harness/tasks`

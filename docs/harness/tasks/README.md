@@ -32,6 +32,14 @@ docs/harness/tasks/
 
 ---
 
+## 当前状态（运维结论 · 2026-05-14）
+
+- **`active/` 为空**：无常驻「Harness-only」任务时属 **预期态**；V2 初版 P1/P2 已归档于 `done/`（见 `_views/done.md`）。  
+- **日常落实**：在 **`ai-ink-brain/content/tasks/`** 与 **`ai-ink-brain-api-python/docs/tasks/`** 中编写验收、`test_strategy` / `failure_paths` 等（见 [`HARNESS_V2_PLAN.md`](../HARNESS_V2_PLAN.md) **§5**）。  
+- **何时再开本目录任务**：跨子仓 CI 真值变更、根 `AGENTS.md` / `docs/harness` 规划大修、或需单独验收的 Harness 工程项时，再在 `active/` 新建 `task_*`。
+
+---
+
 ## 新增任务如何落盘
 
 - **新建位置**：一律放在 `docs/harness/tasks/active/`

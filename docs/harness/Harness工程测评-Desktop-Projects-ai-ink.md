@@ -157,7 +157,9 @@
 | 本目录索引 | `docs/harness/README.md` |
 | 工作区 Harness 任务单（`active` / `done`） | `docs/harness/tasks/`（见 `docs/harness/tasks/README.md`） |
 
-**结论表（§6）更新口径**：Ink 前后端 **Verify** 由「弱 / 中」提升为「**PR 上具备默认 pytest / lint+build 背压**」，与 `HARNESS_V2_PLAN.md` **§4 P1**（前端单测、统一 checklist 扩面）仍属后续。
+**2026-05-14**：前后端 **各自 GitHub 仓库**的 PR 上 **`quality`** / **`pytest`** 已通过；**`verify-fast` 不设 Required**（见 `docs/harness/VERIFICATION_CI_PATTERN.md` §5.1、`HARNESS_V2_P0_ACCEPTANCE.md` §6.1）；Harness 日常纪律在各子仓任务单中落实（`docs/harness/tasks/README.md`「当前状态」）。
+
+**结论表（§6）更新口径**：Ink 前后端 **Verify** 由「弱 / 中」提升为「**PR 上具备默认 pytest / lint+test+build 背压**」；P1（Vitest 纳入 `quality`）已落地。基线正文评测日为 **2026-05-11**，以本节与 [`HARNESS_V2_P0_ACCEPTANCE.md`](HARNESS_V2_P0_ACCEPTANCE.md) 为 **当前** 运维真值补充。
 
 ---
 
