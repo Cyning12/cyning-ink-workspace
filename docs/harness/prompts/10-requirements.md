@@ -23,6 +23,11 @@
 - 已有：目标描述、相关 SPEC 或草稿 task、仓库内已有规范链接。  
 - 缺信息时先列 **假设** 与 **待确认问题**，不猜测业务细节。
 
+## 关联模板（对话发起 · 可选）
+
+- **落盘可复制 Prompt**：[`TEMPLATE-requirements-invoke.md`](TEMPLATE-requirements-invoke.md)（占位符、`reviews` 回填路径、与本文 **同一职责**）。  
+- **Agent 行为**：若用户粘贴的调用体仍含 **`{{`**…**`}}`** 占位符，或模板 **§2** 所列字面量 **未全部替换**，须 **先向用户追问补全**，**不得**输出「可执行 task 正文」或擅自写文件。
+
 ## 输出形状
 
 - 结构化：**背景 / 范围 / 非范围 / 依赖链接 / 验收列表 / failure_paths / 给执行帽的必读列表**。  
@@ -46,9 +51,10 @@
 |------|------|
 | 2026-05-13 | v1：初版 |
 | 2026-05-13 | v1.1：承接任务审核帽 `reviews` 回填与交接说明 |
+| 2026-05-14 | v1.2：链 [`TEMPLATE-requirements-invoke.md`](TEMPLATE-requirements-invoke.md)；占位符未替换则 Agent 须追问 |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`帽子`、`验收`、`failure_paths`、`非范围`、`依赖`、`拒开工`、`test_strategy`、`docs/harness/tasks`、`reviews`、`任务审核`
+`Harness`、`帽子`、`验收`、`failure_paths`、`非范围`、`依赖`、`拒开工`、`test_strategy`、`docs/harness/tasks`、`reviews`、`任务审核`、`TEMPLATE-requirements-invoke`、`占位符`

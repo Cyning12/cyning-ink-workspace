@@ -22,6 +22,12 @@
 
 - 输入为 **待审 SPEC 或 task 全文** + 可选：相关 `HARNESS_V2_PLAN` §5 字段约定链接。
 
+## 关联模板（对话发起 · 可选）
+
+- **落盘可复制 Prompt**：[`TEMPLATE-review-spec-task-invoke.md`](TEMPLATE-review-spec-task-invoke.md)（对话内短评；**默认不要求**写 `reviews/`；与本文 **同一职责**）。  
+- **Agent 行为**：若用户粘贴的调用体仍含 **`{{`**…**`}}`** 占位符，或模板 **§2** 所列字面量 **未全部替换**，须 **先向用户追问补全**，**不得**开始缺口评审。  
+- **须书面审查、签收 / 关闭**：改用 [`TEMPLATE-task-audit-invoke.md`](TEMPLATE-task-audit-invoke.md) + [`22-task-audit.md`](22-task-audit.md)。
+
 ## 输出形状
 
 - **阻塞项**（缺了就不能执行帽开工）与 **非阻塞建议** 分栏或分列表。  
@@ -44,9 +50,10 @@
 |------|------|
 | 2026-05-13 | v1：初版 |
 | 2026-05-13 | v1.1：与任务审核帽 `22` 分工说明 |
+| 2026-05-14 | v1.2：链 [`TEMPLATE-review-spec-task-invoke.md`](TEMPLATE-review-spec-task-invoke.md)；占位符未替换则 Agent 须追问；指向 `22` 书面审 |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`帽子`、`冻结点`、`freeze_id`、`可测性`、`failure_paths`、`test_strategy`、`拒开工`、`22-task-audit`、`reviews`
+`Harness`、`帽子`、`冻结点`、`freeze_id`、`可测性`、`failure_paths`、`test_strategy`、`拒开工`、`22-task-audit`、`reviews`、`TEMPLATE-review-spec-task-invoke`、`占位符`

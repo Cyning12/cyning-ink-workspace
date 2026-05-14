@@ -20,6 +20,11 @@
 
 - 当前分支 **diff**、task 全文、本地可运行环境（或说明 CI 替代）。
 
+## 关联模板（对话发起 · 可选）
+
+- **落盘可复制 Prompt**：[`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md)（占位符、命令证据、回填 `### 自检结论`；与本文 **同一职责**）。  
+- **Agent 行为**：若用户粘贴的调用体仍含 **`{{`**…**`}}`** 占位符，或模板 **§2** 所列字面量 **未全部替换**，须 **先向用户追问补全**，**不得**勾选验收或写自检结论。
+
 ## 输出形状
 
 - **验收表**（勾选 + 证据链接或摘录）。  
@@ -42,9 +47,10 @@
 |------|------|
 | 2026-05-13 | v1：初版 |
 | 2026-05-13 | v1.1：强制回填 task「自检结论」小节 |
+| 2026-05-14 | v1.2：链 [`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md)；占位符未替换则 Agent 须追问 |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`帽子`、`自检`、`Verify`、`test_strategy`、`docs/harness/tasks`、`自检结论`
+`Harness`、`帽子`、`自检`、`Verify`、`test_strategy`、`docs/harness/tasks`、`自检结论`、`TEMPLATE-self-check-invoke`、`占位符`

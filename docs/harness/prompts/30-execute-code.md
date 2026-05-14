@@ -37,15 +37,25 @@
 
 ---
 
+## 关联模板（对话发起 · 可选）
+
+- **落盘可复制 Prompt**：[`TEMPLATE-execute-invoke.md`](TEMPLATE-execute-invoke.md)（与本文 **同一职责**；模板内写清 **占位符** 与 **Agent 追问** 规则）。  
+- **下一棒（自检）**：实现与主验证完成后 → [`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md) **§3** + [`40-self-check.md`](40-self-check.md)（逐条命令证据、回填 `### 自检结论（执行者）`）。  
+- **Agent 行为**：若用户粘贴的调用体仍含 **`{{`**…**`}}`** 占位符，或 **§2** 所列字面量 **未全部替换为真实路径/子仓根/验证命令**，须 **先向用户追问**，**不得**开始改业务代码。
+
+---
+
 ## 修订记录
 
 | 日期 | 摘要 |
 |------|------|
 | 2026-05-13 | v1：初版 |
 | 2026-05-13 | v1.1：交接物链来自检帽回填 task |
+| 2026-05-14 | v1.2：链 [`TEMPLATE-execute-invoke.md`](TEMPLATE-execute-invoke.md) |
+| 2026-05-14 | v1.3：关联模板链 **自检** 调用模板 `TEMPLATE-self-check-invoke` |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`帽子`、`拒开工`、`test_strategy`、`failure_paths`、`Verify`、`docs/harness/tasks`、`自检结论`
+`Harness`、`帽子`、`拒开工`、`test_strategy`、`failure_paths`、`Verify`、`docs/harness/tasks`、`自检结论`、`TEMPLATE-execute-invoke`、`TEMPLATE-self-check-invoke`
