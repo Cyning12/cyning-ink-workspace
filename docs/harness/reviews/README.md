@@ -3,7 +3,8 @@
 > **用途**：存放 **任务审核帽** 的**书面审查结果**（每轮必产出）；与 `prompts/22-task-audit.md` 配套。  
 > **真值**：单条 task 是否可关闭，以 **审查文档「签收 / 关闭」** 节为准，并与 task 头部 `状态` 一致；**不得以聊天结论替代落盘**。  
 > **子仓落盘**：任务单落在 **`ai-ink-brain-api-python/docs/tasks/`** 的后端 task，其 **任务审核全文** 归档在 **`ai-ink-brain-api-python/docs/harness/reviews/`**（命名规则与本节一致）；本目录可仅存 **指针 md** 链向子仓，避免双份漂移。  
-> **对话发起模板**：[`../prompts/TEMPLATE-task-audit-invoke.md`](../prompts/TEMPLATE-task-audit-invoke.md)（占位符未替换时 **Agent 须追问**，不得落盘；与 `22` 双向关联）。
+> **对话发起模板**：[`../prompts/TEMPLATE-task-audit-invoke.md`](../prompts/TEMPLATE-task-audit-invoke.md)（占位符未替换时 **Agent 须追问**，不得落盘；与 `22` 双向关联）。  
+> **新帽节 Invoke 快照**（每帽 **首次** 粘贴已替换 §3 时的可追溯锚点，**非**审查结论本身）：[`../invokes/README.md`](../invokes/README.md)；审查 md 元信息可增 **`invoke_snapshot`** 列链回对应文件。
 
 ---
 
@@ -24,7 +25,8 @@
 2. 若有 **需改动项**：交由 **任务帽**（`prompts/10-requirements.md`）按审查文档的 **回填清单** 更新 **task 正文**（含 `docs/harness/tasks/` 或子仓 task）。  
 3. **再次** 由任务审核帽产出 **新一轮** 审查文档（`R2`…），直至审查文档中声明 **可关闭** 或 **仍阻塞**（阻塞须写清）。  
 4. **任务正式结束点**：在 **最终一轮** 审查文档的 **「签收 / 关闭」** 节写明结论；task 头部 `done` **须与此节一致**。  
-5. **自检结论**：执行闭环中 **`### 自检结论（执行者）`** 由 **自检帽** 写入 task（见 `../prompts/40-self-check.md`）；与 **审查签收** 分列，复检可同时核对二者。
+5. **自检结论**：执行闭环中 **`### 自检结论（执行者）`** 由 **自检帽** 写入 task（见 `../prompts/40-self-check.md`）；与 **审查签收** 分列，复检可同时核对二者。  
+6. **Invoke 快照**（建议）：每顶帽子 **新开局** 时落盘 §3 调用体（见 [`../invokes/README.md`](../invokes/README.md)）；在审查 md 元信息记 **`invoke_snapshot`**，与第 1 步产出的审查路径形成 **指令 → 结论** 双锚点。
 
 ---
 
@@ -36,9 +38,11 @@
 | 2026-05-13 | v1.1：闭环第 5 步链 **自检结论** 回填 task（`40-self-check`） |
 | 2026-05-14 | v1.2：链 **任务审核调用模板** `../prompts/TEMPLATE-task-audit-invoke.md`（占位符追问规则） |
 | 2026-05-14 | v1.3：**子仓落盘**：`ai-ink-brain-api-python` 的 `docs/harness/reviews/` 为后端 task 审核全文真值；本目录可存指针 |
+| 2026-05-14 | v1.4：链 **Invoke 快照** 总规 [`../invokes/README.md`](../invokes/README.md)；审查元信息可记 `invoke_snapshot` |
+| 2026-05-14 | v1.5：闭环第 6 步 **Invoke 快照** 与审查双锚点 |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`reviews`、`任务审核`、`审计`、`R1`、`签收`、`闭环`、`docs/harness/tasks`、`自检结论`、`TEMPLATE-task-audit-invoke`
+`Harness`、`reviews`、`任务审核`、`审计`、`R1`、`签收`、`闭环`、`docs/harness/tasks`、`自检结论`、`TEMPLATE-task-audit-invoke`、`invokes`、`invoke_snapshot`

@@ -11,12 +11,13 @@
 2. 将全文或「身份 + 只做什么 + 禁止什么」段复制为 **system 前缀**（或粘贴到项目规则前的固定说明）。  
 3. 将 **task / SPEC / diff / 日志** 作为 user 消息附上；复检帽 **不要** 附带执行过程长文（见 `50-independent-reinspect.md`）。  
 4. **任务审核帽**（`22-task-audit.md`）每轮 **必须** 在 [`../reviews/README.md`](../reviews/README.md) 约定目录落盘；若有回填项 → **任务帽**（`10-requirements.md`）改 task → **再审** 产出 `R+1`；**任务签收** 以终轮审查文档 **「签收 / 关闭」** 为准（与 task 状态一致）。  
-5. **快速发起任务审核（`22`）**：复制 [`TEMPLATE-task-audit-invoke.md`](TEMPLATE-task-audit-invoke.md) **§3** 正文并替换 **§2** 占位符；若占位符未替换，**Agent 须追问**，不得代填或落盘（见模板 **§1** 与 `22-task-audit.md` **关联模板**）。  
-6. **快速发起需求分析（`10`）**：复制 [`TEMPLATE-requirements-invoke.md`](TEMPLATE-requirements-invoke.md) **§3** 并替换 **§2**；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `10-requirements.md` **关联模板**）。  
-7. **快速发起规格短评（`20`）**：复制 [`TEMPLATE-review-spec-task-invoke.md`](TEMPLATE-review-spec-task-invoke.md) **§3** 并替换 **§2**；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `20-review-spec-task.md` **关联模板**）；须 **书面签收** 时改用第 5 步 **`22` 模板**。  
-8. **快速发起执行（`30`）**：复制 [`TEMPLATE-execute-invoke.md`](TEMPLATE-execute-invoke.md) **§3** 正文并替换 **§2** 占位符；若占位符未替换，**Agent 须追问**，不得开工写业务代码（见模板 **§1** 与 `30-execute-code.md`）。  
-9. **快速发起自检（`40`）**：复制 [`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md) **§3** 并替换 **§2**；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `40-self-check.md` **关联模板**）；须在 task 中落 **`### 自检结论（执行者）`**。  
-10. **快速发起独立复检 / 全局验收（`50`）**：复制 [`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md) **§3**（**短版 · 默认**）并替换 **§2**；**`{{REINSPECT_MODE}}`** 须为 **`独立复检`** / **`全局验收`** / **`两者`** 之一；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `50-independent-reinspect.md`）。**全量升级（可选）**：[`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md) **§3**（结构化输出、`failure_paths` / `test_strategy` 专节、子仓 checklist、可选 `PR_OR_CI`）。**已填示例**：[`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md)。
+5. **新帽节 Invoke 快照（可追溯链环）**：每顶帽子 **首次** 把某 `TEMPLATE-*-invoke.md` **§3**（占位符已全部替换）粘贴进 **新对话** 时，将 **同一份正文** 落盘至 [`../invokes/README.md`](../invokes/README.md) 约定路径；**同一帽**内多轮追问 **不** 重复落盘。审查 md 元信息可增 **`invoke_snapshot`**；task 可选 **`### Invoke 快照（可选）`**。  
+6. **快速发起任务审核（`22`）**：复制 [`TEMPLATE-task-audit-invoke.md`](TEMPLATE-task-audit-invoke.md) **§3** 正文并替换 **§2** 占位符；若占位符未替换，**Agent 须追问**，不得代填或落盘（见模板 **§1** 与 `22-task-audit.md` **关联模板**）。  
+7. **快速发起需求分析（`10`）**：复制 [`TEMPLATE-requirements-invoke.md`](TEMPLATE-requirements-invoke.md) **§3** 并替换 **§2**；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `10-requirements.md` **关联模板**）。  
+8. **快速发起规格短评（`20`）**：复制 [`TEMPLATE-review-spec-task-invoke.md`](TEMPLATE-review-spec-task-invoke.md) **§3** 并替换 **§2**；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `20-review-spec-task.md` **关联模板**）；须 **书面签收** 时改用第 6 步 **`22` 模板**。  
+9. **快速发起执行（`30`）**：复制 [`TEMPLATE-execute-invoke.md`](TEMPLATE-execute-invoke.md) **§3** 正文并替换 **§2** 占位符；若占位符未替换，**Agent 须追问**，不得开工写业务代码（见模板 **§1** 与 `30-execute-code.md`）。  
+10. **快速发起自检（`40`）**：复制 [`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md) **§3** 并替换 **§2**；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `40-self-check.md` **关联模板**）；须在 task 中落 **`### 自检结论（执行者）`**。  
+11. **快速发起独立复检 / 全局验收（`50`）**：复制 [`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md) **§3**（**短版 · 默认**）并替换 **§2**；**`{{REINSPECT_MODE}}`** 须为 **`独立复检`** / **`全局验收`** / **`两者`** 之一；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `50-independent-reinspect.md`）。**全量升级（可选）**：[`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md) **§3**（结构化输出、`failure_paths` / `test_strategy` 专节、子仓 checklist、可选 `PR_OR_CI`）。**已填示例**：[`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md)。
 
 ---
 
@@ -39,6 +40,7 @@
 | **独立复检 + 全局验收 · 已填示例** | [`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md) | ChatBI P1-1；由全量模板复制后替换占位符 |
 | 独立复检 | [`50-independent-reinspect.md`](50-independent-reinspect.md)（前半） | diff + 日志 + 验收表；pass/fail + 证据 |
 | 全局验收 | [`50-independent-reinspect.md`](50-independent-reinspect.md)（后半节） | `freeze_id` + 人签 checklist |
+| **新帽节 Invoke 快照（工件目录）** | [`../invokes/README.md`](../invokes/README.md) | 每帽 **首次** 粘贴已替换 §3 时落盘；命名与元数据见该 README；与 `reviews`、task **`### Invoke 快照（可选）`** 互链 |
 
 **与 §3 差异**：无实质规则冲突；本目录将表格摘要 **细化为可复制的角色指令**（含输入裁剪与输出形状）；**任务审核** 与 **审查短评** 拆分为 `22` / `20` 两顶帽子。§5 字段细则仍以规划正文为准。
 
@@ -56,9 +58,10 @@
 | 2026-05-14 | v1.5：增补 [`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md)、[`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md)；使用方式第 9～10 步 |
 | 2026-05-14 | v1.6：增补 [`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md)；README 表与第 10 步链入 |
 | 2026-05-14 | v1.7：增补 [`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md)；第 10 步区分短版 / 全量 / EXAMPLE |
+| 2026-05-14 | v1.8：使用方式第 5 步 **Invoke 快照**；表增 [`../invokes/README.md`](../invokes/README.md)；与 `reviews` 互链 |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`prompts`、`帽子`、`HARNESS_V2_PLAN` §3、`拒开工`、`test_strategy`、`failure_paths`、`freeze_id`、`docs/harness/tasks`、`22-task-audit`、`reviews`、`签收`、`自检结论`、`TEMPLATE-task-audit-invoke`、`TEMPLATE-requirements-invoke`、`TEMPLATE-review-spec-task-invoke`、`TEMPLATE-execute-invoke`、`TEMPLATE-self-check-invoke`、`TEMPLATE-independent-reinspect-invoke`、`TEMPLATE-independent-reinspect-invoke-full`、`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1`、`占位符`
+`Harness`、`prompts`、`帽子`、`HARNESS_V2_PLAN` §3、`拒开工`、`test_strategy`、`failure_paths`、`freeze_id`、`docs/harness/tasks`、`22-task-audit`、`reviews`、`invokes`、`invoke 快照`、`invoke_snapshot`、`签收`、`自检结论`、`TEMPLATE-task-audit-invoke`、`TEMPLATE-requirements-invoke`、`TEMPLATE-review-spec-task-invoke`、`TEMPLATE-execute-invoke`、`TEMPLATE-self-check-invoke`、`TEMPLATE-independent-reinspect-invoke`、`TEMPLATE-independent-reinspect-invoke-full`、`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1`、`占位符`

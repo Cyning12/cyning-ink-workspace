@@ -44,6 +44,7 @@
 ## 交接物
 
 - **必有**：审查 md 的**相对工作区根**路径（含子仓 `ai-ink-brain-api-python/docs/harness/reviews/` 若适用）+ 文内 **「给下一棒」** 一句。  
+- **建议**：本轮开帽时若已落盘 **Invoke 快照**（见 [`../invokes/README.md`](../invokes/README.md)），在审查文元信息表记 **`invoke_snapshot`** 链回该路径。  
 - **若有回填**：给任务帽的 **逐条清单**（复制进对话 + 指明 task 路径）；回填完成后 **必须触发新一轮本帽** 产出 `R+1` 文档。
 
 ---
@@ -55,9 +56,10 @@
 | 2026-05-13 | v1：任务审核帽独立落盘；强制 reviews 产出；闭环与终点点；与 20 分工 |
 | 2026-05-14 | v1.1：链 [`TEMPLATE-task-audit-invoke.md`](TEMPLATE-task-audit-invoke.md)；占位符未替换则 Agent 须追问、不得落盘 |
 | 2026-05-14 | v1.2：`ai-ink-brain-api-python/docs/tasks` 绑定 task → 审查全文落盘子仓 `docs/harness/reviews/`；根目录可链指针 |
+| 2026-05-14 | v1.3：交接物增 **Invoke 快照** 与 `invoke_snapshot` 元信息建议链 |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`任务审核`、`reviews`、`_audit_`、`签收`、`闭环`、`任务帽`、`10-requirements`、`docs/harness/tasks`、`TEMPLATE-task-audit-invoke`、`占位符`、`ai-ink-brain-api-python/docs/harness/reviews`
+`Harness`、`任务审核`、`reviews`、`_audit_`、`签收`、`闭环`、`任务帽`、`10-requirements`、`docs/harness/tasks`、`TEMPLATE-task-audit-invoke`、`占位符`、`invokes`、`invoke_snapshot`、`ai-ink-brain-api-python/docs/harness/reviews`
