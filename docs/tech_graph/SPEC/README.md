@@ -45,6 +45,7 @@
 
 | 子目录 | 对应方案 | 放置内容 |
 | --- | --- | --- |
+| [prompts/](../prompts/) | **专题 Prompt** | **仅**本专题的已填可复制调用体；**不**放 Harness 通模（见 [`prompts/README.md`](../prompts/README.md)） |
 | [json_graph/](./json_graph/) | 方案1 | `graph.json` 导出、CI、消费约定等**仅方案1**的执行说明与派生文档 |
 | [query_graph/](./query_graph/) | 方案2 | 内存图、CLI/MCP、Harness 挂钩等**仅方案2**的执行说明与派生文档 |
 | [neo4j/](./neo4j/) | 方案3 | Neo4j 导入、Cypher、运维等**仅方案3**的执行说明与派生文档 |

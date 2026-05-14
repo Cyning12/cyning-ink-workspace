@@ -1,8 +1,9 @@
 # 已填需求帽 Prompt — tech_graph 方案1（双仓 task 初稿）
 
 > **用途**：复制下方 **「§A 整段可复制正文」** 到 **新对话**，直接发起需求帽（`10-requirements`），**无需**再替换 `{{…}}`。  
-> **帽子真值**：[`10-requirements.md`](10-requirements.md)；**调用模板母版**：[`TEMPLATE-requirements-invoke.md`](TEMPLATE-requirements-invoke.md)。  
-> **规划真值**：[`docs/tech_graph/改进方向.md`](../../tech_graph/改进方向.md)（v1.1，含 R1～R4、闸口 A/B）。
+> **帽子真值**：[`docs/harness/prompts/10-requirements.md`](../../harness/prompts/10-requirements.md)；**调用模板母版**：[`docs/harness/prompts/TEMPLATE-requirements-invoke.md`](../../harness/prompts/TEMPLATE-requirements-invoke.md)。  
+> **规划真值**：[改进方向.md](../改进方向.md)（v1.1，含 R1～R4、闸口 A/B）。  
+> **落盘位置**：本文件在 **`docs/tech_graph/prompts/`**（专题内）；**勿**复制到 `docs/harness/prompts/`。
 
 ---
 
@@ -51,6 +52,7 @@ AGENTS.md
 | 日期 | 摘要 |
 |------|------|
 | 2026-05-14 | v1：已填需求帽正文，tech_graph 方案1 双仓 task 初稿 |
+| 2026-05-14 | v1.1：自 `docs/harness/prompts/` 迁至 `docs/tech_graph/prompts/`，与 Harness 通模分工 |
 
 ## 给 Cursor
 

@@ -1,7 +1,8 @@
 # docs/harness/prompts（Harness 角色帽子）
 
 > **用途**：各 **帽子** 的短 system 前缀素材（Markdown）；与 [`../HARNESS_V2_PLAN.md`](../HARNESS_V2_PLAN.md) **§3** 硬规则摘要语义对齐，按需复制到对话。  
-> **真值**：规划 §3、§5；本目录为 **Guides** 层，**不替代** CI 与 task 正文。
+> **真值**：规划 §3、§5；本目录为 **Guides** 层，**不替代** CI 与 task 正文。  
+> **专题已填 Prompt**：业务线（如 tech_graph）的 **已替换占位符** 长调用体 **不**放本目录，见 **`docs/tech_graph/prompts/`**（与 `TEMPLATE-*` 分工，避免污染 Harness 通模）。
 
 ---
 
@@ -26,7 +27,6 @@
 | §3 帽子 | 本目录文件 | 说明 |
 |--------|------------|------|
 | 需求 / 任务分析 | [`10-requirements.md`](10-requirements.md) | 验收可观测、`failure_paths`、非范围、依赖链接；承接 **任务审核** 回填清单 |
-| **已填需求帽 · tech_graph 方案1（双仓 task 初稿）** | [`PROMPT-filled-requirements-tech-graph-phase1-v1.md`](PROMPT-filled-requirements-tech-graph-phase1-v1.md) | 无 `{{}}`；复制 §A 发起 `10`；与 `TEMPLATE-requirements-invoke` 同职责 |
 | 规格 / 任务审查 | [`20-review-spec-task.md`](20-review-spec-task.md) | 对话内缺口短评；契约变更标 **冻结点升级**；**不要求**每次写 `reviews/` |
 | **规格短评 · 调用模板** | [`TEMPLATE-review-spec-task-invoke.md`](TEMPLATE-review-spec-task-invoke.md) | 可复制 Prompt；占位符未替换则 **Agent 追问**；与 `20` 双向关联；书面审改用 `22` 模板 |
 | **任务审核** | [`22-task-audit.md`](22-task-audit.md) | **强制** [`../reviews/`](../reviews/README.md) 落盘；R1/R2… 闭环；**签收 / 关闭** = 任务终点点 |
@@ -58,10 +58,7 @@
 | 2026-05-14 | v1.5：增补 [`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md)、[`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md)；使用方式第 9～10 步 |
 | 2026-05-14 | v1.6：增补 [`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md)；README 表与第 10 步链入 |
 | 2026-05-14 | v1.7：增补 [`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md)；第 10 步区分短版 / 全量 / EXAMPLE |
-| 2026-05-14 | v1.8：使用方式第 5 步 **Invoke 快照**；表增 [`../invokes/README.md`](../invokes/README.md)；与 `reviews` 互链 |
-| 2026-05-14 | v1.10：链 [`PROMPT-filled-requirements-tech-graph-phase1-v1.md`](PROMPT-filled-requirements-tech-graph-phase1-v1.md)；表增一行 |
-
----
+| 2026-05-14 | v1.11：声明专题已填 Prompt 放 `docs/tech_graph/prompts/`；撤除误增的 tech_graph 行与 v1.10 修订行 |
 
 ## 给 Cursor
 
