@@ -26,3 +26,4 @@
 | 2026-05-14 | v1.5：`10` / `20` 调用模板 [`prompts/TEMPLATE-requirements-invoke.md`](prompts/TEMPLATE-requirements-invoke.md)、[`prompts/TEMPLATE-review-spec-task-invoke.md`](prompts/TEMPLATE-review-spec-task-invoke.md)；索引表链四模板 |
 | 2026-05-14 | v1.6：`40` / `50` 调用模板 [`prompts/TEMPLATE-self-check-invoke.md`](prompts/TEMPLATE-self-check-invoke.md)、[`prompts/TEMPLATE-independent-reinspect-invoke.md`](prompts/TEMPLATE-independent-reinspect-invoke.md)；索引表链六模板 |
 | 2026-05-14 | v1.7：[`invokes/README.md`](invokes/README.md)（新帽节 Prompt 快照约定与 `reviews` 互链） |
+| 2026-05-15 | v1.8：Invoke 快照 **首份示例** 落盘（子仓 `ai-ink-brain-api-python/docs/harness/invokes/` + 工作区 [`invokes/pointer_invoke_chatbi_v3_task_audit_r2.md`](invokes/pointer_invoke_chatbi_v3_task_audit_r2.md) 指针） |

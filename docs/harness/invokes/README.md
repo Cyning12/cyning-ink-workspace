@@ -27,7 +27,7 @@
 
 > **布局注意**：若工作区根 `.gitignore` **整路径忽略** 某子仓目录（嵌套独立 git、上层仓不收录其文件），则 **Git 可提交的真值** 仅为根目录 **`docs/harness/invokes/`**；仍建议在快照元信息 `task_paths` 中写清子仓 task 相对路径，语义上与「该子仓 task 开帽」一致。子仓内 `docs/harness/invokes/README.md`（若存在）供 **仅在子仓仓库内** 开发时对照。
 
-**指针**：若快照在子仓且 **上层仓可收录** 子仓路径，工作区 `docs/harness/invokes/` 可存 **仅含元数据 + 相对链** 的短 md，避免双份正文漂移（与 reviews「指针 md」策略同型）。
+**指针**：若快照在子仓且 **上层仓可收录** 子仓路径，工作区 `docs/harness/invokes/` 可存 **仅含元数据 + 相对链** 的短 md，避免双份正文漂移（与 reviews「指针 md」策略同型）。**示例**：[pointer_invoke_chatbi_v3_task_audit_r2.md](pointer_invoke_chatbi_v3_task_audit_r2.md)（→ 子仓 `22` 任务审核 R2 启动体快照）。
 
 ---
 
@@ -92,6 +92,7 @@
 | 2026-05-14 | v1：目录说明、触发条件、命名、正文骨架、与 reviews/task 链接、安全 |
 | 2026-05-14 | v1.1：§2 增补工作区 gitignore 子仓时的真值与「指针」说明 |
 | 2026-05-14 | v1.2：真值段声明与各 `TEMPLATE-*-invoke` §3 第 0 条 / 【五·附】对齐 |
+| 2026-05-15 | v1.3：工作区 **指针** 示例 [`pointer_invoke_chatbi_v3_task_audit_r2.md`](pointer_invoke_chatbi_v3_task_audit_r2.md)（子仓快照正文真值、上层链回） |
 
 ---
 
