@@ -23,7 +23,7 @@
 
 | 占位符字面量（须全部消失于最终粘贴体） | 含义 | 示例 |
 |----------------------------------------|------|------|
-| `{{TASK_PATH}}` | 主 task 路径（相对工作区根 `Projects/`） | `ai-ink-brain-api-python/docs/tasks/active/task_chatbi_v3_sql_ast_text2sql_gate_v1.md` |
+| `{{TASK_PATH}}` | 主 task 路径（相对工作区根 `Projects/`） | `ai-ink-brain-api-python/docs/tasks/done/task_chatbi_v3_sql_ast_text2sql_gate_v1.md` |
 | `{{SUBPROJECT_ROOT}}` | **命令与改代码的仓库根目录名**（相对 `Projects/`） | `ai-ink-brain-api-python` |
 | `{{VERIFY_COMMAND}}` | 合并前须绿的 **单条**验证命令（与子仓 CI / task 正文一致；多命令可写「先 X 再 Y」在同格） | `pytest tests -m "not intent_eval and not intent_benchmark"` |
 | `{{AUDIT_REVIEW_PATH_OR_NONE}}` | 本轮依赖的 **任务审核** 书面结论路径（相对 `Projects/`）；无则 **`无`** | `ai-ink-brain-api-python/docs/harness/reviews/task_chatbi_v3_sql_ast_and_prompt_injection_audit_R1_20260514.md` 或 `无` |

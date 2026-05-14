@@ -32,7 +32,7 @@ Harness 帽子：独立复检（§一）+ 全局验收（§二）— 统一 Agen
 
 【四、输入（已由人工替换；相对工作区根 Projects/）】
 - TASK_PATH：
-  ai-ink-brain-api-python/docs/tasks/active/task_chatbi_v3_sql_ast_text2sql_gate_v1.md
+  ai-ink-brain-api-python/docs/tasks/done/task_chatbi_v3_sql_ast_text2sql_gate_v1.md
 - SUBPROJECT_ROOT：
   ai-ink-brain-api-python
 - REINSPECT_MODE：
@@ -89,7 +89,7 @@ Harness 帽子：独立复检（§一）+ 全局验收（§二）— 统一 Agen
 
 ══════════════════════════════════════════════════════════════════
 已填键速查（本示例；其他任务请改「四、输入」）
-TASK_PATH              = ai-ink-brain-api-python/docs/tasks/active/task_chatbi_v3_sql_ast_text2sql_gate_v1.md
+TASK_PATH              = ai-ink-brain-api-python/docs/tasks/done/task_chatbi_v3_sql_ast_text2sql_gate_v1.md
 SUBPROJECT_ROOT        = ai-ink-brain-api-python
 REINSPECT_MODE         = 两者
 DIFF_RANGE_OR_NOTE     = 5e6cfdc / git show 5e6cfdc --stat

@@ -23,7 +23,7 @@
 
 | 占位符字面量（须全部消失于最终粘贴体） | 含义 | 首轮示例 | 复审示例 |
 |----------------------------------------|------|----------|----------|
-| `{{TASK_PATHS}}` | 待审 task 路径（相对工作区根 `Projects/`），多行时每行一条 | `ai-ink-brain-api-python/docs/tasks/active/task_chatbi_v3_sql_ast_text2sql_gate_v1.md` | 同左或多条 |
+| `{{TASK_PATHS}}` | 待审 task 路径（相对工作区根 `Projects/`），多行时每行一条 | `ai-ink-brain-api-python/docs/tasks/done/task_chatbi_v3_sql_ast_text2sql_gate_v1.md` | 同左或多条 |
 | `{{SPEC_PATHS_OPTIONAL}}` | 关联 SPEC，无则整段替换为 **`无`** | `ai-ink-brain-api-python/docs/spec/v3-agent/SPEC-ChatBI-V3-Security.md` | 同左或 `无` |
 | `{{PREV_REVIEW_PATH_OR_NONE}}` | 上一轮审查文档相对路径（**工作区根**）；**首轮**填 **`无`** | `无` | `ai-ink-brain-api-python/docs/harness/reviews/task_…_audit_R1_20260514.md` |
 | `{{AUDIT_ROUND}}` | 本轮轮次，与文件名 `R<n>` 一致 | `R1` | `R2` |
