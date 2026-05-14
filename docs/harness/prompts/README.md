@@ -59,6 +59,7 @@
 | 2026-05-14 | v1.6：增补 [`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md)；README 表与第 10 步链入 |
 | 2026-05-14 | v1.7：增补 [`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md)；第 10 步区分短版 / 全量 / EXAMPLE |
 | 2026-05-14 | v1.8：使用方式第 5 步 **Invoke 快照**；表增 [`../invokes/README.md`](../invokes/README.md)；与 `reviews` 互链 |
+| 2026-05-14 | v1.9：各 `TEMPLATE-*-invoke` §3 已内嵌 **第 0 条 / 【五·附】** 开帽落盘 invokes（与 `invokes/README` 一致） |
 
 ---
 

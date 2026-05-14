@@ -47,7 +47,10 @@ Harness 帽子：独立复检（§一）+ 全局验收（§二）— 统一 Agen
 【五、输入裁剪（防上下文爆炸）】
 - 优先：task 全文中的「验收标准」「failure_paths」「test_strategy」、task「### 自检结论（执行者）」、diff 或 `git show` 统计、pytest/CI 日志要点。
 - 避免：执行帽长对话、中间草稿、无行号的大段代码粘贴。
-- 若 task 声明 `test_strategy: required`：必须评价「测试与实现是否同 PR 可失败复现」；缺测试或证据则 fail 或「证据不足」，不得凭感觉 pass。
+- 若 task 声明 `test_strategy: required` 时：必须评价「测试与实现是否同 PR 可失败复现」；缺测试或证据则 fail 或「证据不足」，不得凭感觉 pass。
+
+【五·附、Invoke 快照（开帽起点）】
+- 在输出【六】各节前，将 **本 Prompt 全文**（占位符已替换）按 `docs/harness/invokes/README.md` 落盘到 `Projects/docs/harness/invokes/`（元数据表 + 快照 fenced code）。同一会话追问 **不** 再新增快照文件。
 
 【六、你必须完成的输出（按标题顺序输出）】
 
@@ -110,6 +113,7 @@ PR_OR_CI_OR_NONE       = 无
 | 2026-05-14 | v1：ChatBI P1-1 场景占位符已替换示例，链 `50` |
 | 2026-05-14 | v1.1：元信息改为派生自 `TEMPLATE-independent-reinspect-invoke-full`；链短模板关系 |
 | 2026-05-14 | v1.2：Prompt 内增「九、对话回复形状」与全量模板对齐 |
+| 2026-05-14 | v1.3：增「五·附」**Invoke 快照（开帽起点）** |
 
 ---
 

@@ -47,6 +47,7 @@
 {{AUDIT_REVIEW_PATH_OR_NONE}}
 
 你必须完成：
+0. **Invoke 快照（开帽起点）**：在输出下列第 1 条起的实质性结果之前，先将 **本用户消息全文**（= 本模板 §3、占位符已全部替换）按 `docs/harness/invokes/README.md` 落盘到 `Projects/docs/harness/invokes/`（含元数据表 + 快照 fenced code）。同一会话内追问 **不** 再新增快照文件。
 1. 输出结构化块：背景 / 范围 / 非范围 / 依赖链接 / 验收列表 / failure_paths / 给执行帽的必读列表；矛盾单独小节（若有）。
 2. 注明建议 test_strategy（required | recommended | not_applicable）及 test_strategy_note（若 not_applicable 须附理由）。
 3. 若 AUDIT 路径非「无」：按该审查文档的回填清单逐条映射到 task 小节建议，并在建议文末注明「按审查 R<n> 回填」应指向的文件名。
@@ -64,6 +65,7 @@
 |------|------|
 | 2026-05-14 | v1：与 `10-requirements` 关联；占位符未替换则 Agent 追问 |
 | 2026-05-14 | v1.1：§3 增对话收口「下一棒可复制 Prompt」（含打回、二次审查、上一棒修复） |
+| 2026-05-14 | v1.2：§3 可复制正文增第 **0** 条 **Invoke 快照（开帽起点）** |
 
 ---
 

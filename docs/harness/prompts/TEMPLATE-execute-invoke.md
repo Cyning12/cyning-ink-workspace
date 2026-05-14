@@ -53,6 +53,7 @@
 {{SPEC_PATHS_OPTIONAL}}
 
 你必须完成：
+0. **Invoke 快照（开帽起点）**：在输出下列第 1 条起的实质性结果之前，先将 **本用户消息全文**（= 本模板 §3、占位符已全部替换）按 `docs/harness/invokes/README.md` 落盘到 `Projects/docs/harness/invokes/`（含元数据表 + 快照 fenced code）。同一会话内追问 **不** 再新增快照文件。
 1. 通读 task 全文：头部 `gates_before_code`、`test_strategy` / `test_strategy_note`、`freeze_id`、`failure_paths`、拒开工条件、验收标准、必读列表、非范围。
 2. 若 task 明示拒开工条件未满足（缺 failure_paths 可操作性、缺验收命令、必读未覆盖等）→ **仅输出 Markdown 阻塞清单**（缺什么、建议回填的小节标题、推荐下一棒角色），**不写**业务实现代码。
 3. `test_strategy: required` 时：先增加或调整 **可失败** 的自动化测试（或与实现同 PR 且满足 task 所述 red-green / 可复现失败语义），再改实现；禁止「只写实现、后补测」绕过 task 约定。
@@ -73,6 +74,7 @@
 | 2026-05-14 | v1：与 `TEMPLATE-task-audit-invoke` 对称；链 `30` / `40` / HARNESS §5 |
 | 2026-05-14 | v1.1：用途链 **自检** 调用模板 `TEMPLATE-self-check-invoke`（仅验证路径） |
 | 2026-05-14 | v1.2：§3 增第 7 条对话收口；自检回填与「下一棒可复制 Prompt」分拆 |
+| 2026-05-14 | v1.3：§3 可复制正文增第 **0** 条 **Invoke 快照（开帽起点）** |
 
 ---
 

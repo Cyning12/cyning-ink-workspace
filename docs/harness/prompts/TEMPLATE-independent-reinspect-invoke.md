@@ -52,6 +52,7 @@
 {{AUDIT_REVIEW_PATH_OR_NONE}}
 
 你必须完成：
+0. **Invoke 快照（开帽起点）**：在输出下列分节实质性结果之前，先将 **本用户消息全文**（= 本模板 §3、占位符已全部替换）按 `docs/harness/invokes/README.md` 落盘到 `Projects/docs/harness/invokes/`（含元数据表 + 快照 fenced code）。同一会话内追问 **不** 再新增快照文件。
 
 【当模式为「独立复检」或「两者」时 — 对应 hat §一】
 1. 读取 task 内「### 自检结论（执行者）」；若缺失 → 阻塞首条：要求先跑 TEMPLATE-self-check-invoke + 40。
@@ -86,6 +87,7 @@
 | 2026-05-14 | v1：与 `50-independent-reinspect` 关联；MODE 三选一；占位符未替换则 Agent 追问 |
 | 2026-05-14 | v1.1：链全量模板 `TEMPLATE-independent-reinspect-invoke-full` 与 EXAMPLE；增 **§4 关系表** |
 | 2026-05-14 | v1.2：§3 对话收口改为「下一棒可复制 Prompt」（含打回、二次审查、上一棒修复） |
+| 2026-05-14 | v1.3：§3 可复制正文增第 **0** 条 **Invoke 快照（开帽起点）** |
 
 ---
 
