@@ -57,11 +57,10 @@
 1. 通读待审 task 全文及头部元信息（状态、freeze_id、gates_before_code、test_strategy、failure_paths、验收、必读链接）。
 2. 对照 HARNESS_V2_PLAN.md §5 检查验收可观测性、required 与可失败自动化测试说明。
 3. 落盘一篇审查文档至 **上表路径**（与 `reviews/README.md`、`22-task-audit.md` 子仓规则一致）。
-4. 文内结构：元信息 → 审查结论摘要 → 阻塞 / 非阻塞 → 需任务帽回填清单（若有）→ 是否建议执行帽开工 → 「签收 / 关闭」仅在终轮或明确不可关闭时写死。
+4. 文内结构：元信息 → 审查结论摘要 → 阻塞 / 非阻塞 → 需任务帽回填清单（若有）→ 是否建议执行帽开工 → 「签收 / 关闭」仅在终轮或明确不可关闭时写死 → **「下一棒可复制 Prompt」**（`text` 代码围栏，内为已替换占位符的下一棒 §3 全文；与 `22-task-audit.md` **交接物**（1）（2）逐字一致）。
 5. 禁止仅在对话里说「过了」而不写 reviews；禁止在仍有阻塞时指示执行帽开工。
 6. 不要写业务实现代码；不要擅自改写 task 正文。
-
-对话回复：生成可以完整复制的 Prompt，用于直接交给下一棒执行；须兼顾打回、二次审查等情形，下一棒也可能是上一棒（由其修复问题）。
+7. **对话与归档**：① **对话回复** 中输出与步骤 4 审查 md 末节 **完全相同** 的下一棒可复制 Prompt 全文；② **禁止**仅用「见落盘审查」等语省略对话中的 Prompt 正文。
 ```
 
 ---
@@ -75,9 +74,10 @@
 | 2026-05-14 | v1.3：用途链 **需求帽** 调用模板 `TEMPLATE-requirements-invoke`（回填 → 再审） |
 | 2026-05-14 | v1.4：§3 对话收口改为「下一棒可复制 Prompt」（含打回、二次审查、上一棒修复） |
 | 2026-05-14 | v1.5：§3 可复制正文增第 **0** 条 **Invoke 快照**；审查落盘时元信息填 `invoke_snapshot` |
+| 2026-05-15 | v1.6：§3 文内结构增 **「下一棒可复制 Prompt」**；步骤 7 明确对话与审查 md 须逐字一致 |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`TEMPLATE-task-audit-invoke`、`TEMPLATE-requirements-invoke`、`TEMPLATE-execute-invoke`、`22-task-audit`、`10-requirements`、`reviews`、`占位符`、`追问`、`HARNESS_V2_PLAN` §5
+`Harness`、`TEMPLATE-task-audit-invoke`、`TEMPLATE-requirements-invoke`、`TEMPLATE-execute-invoke`、`22-task-audit`、`10-requirements`、`reviews`、`占位符`、`追问`、`下一棒可复制 Prompt`、`HARNESS_V2_PLAN` §5
