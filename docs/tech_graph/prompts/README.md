@@ -13,9 +13,10 @@
 
 ## 本目录索引
 
-| 文件 | 用途 |
+| 文件 / 目录 | 用途 |
 | --- | --- |
-| [PROMPT-filled-requirements-tech-graph-phase1-v1.md](./PROMPT-filled-requirements-tech-graph-phase1-v1.md) | 需求帽：方案1 双仓 task 初稿（已填，复制 §A） |
+| [PROMPT-filled-requirements-tech-graph-phase1-v1.md](./PROMPT-filled-requirements-tech-graph-phase1-v1.md) | 需求帽：方案1 双仓 task 初稿（已填，复制 §A）；Invoke 落 [`../invokes/`](../invokes/) |
+| [`../invokes/`](../invokes/) | 本专题 **Invoke 快照**（与 `docs/harness/invokes/` 分工见该 README） |
 
 ## 命名建议
 

@@ -25,6 +25,7 @@
 - **输出**：与各输入根同目录的 `graph.json`（前后端各一份；跨仓合并策略若需要另开 SPEC，默认不合并）。
 - **与契约**：`_contract_manifest.json`（当前主要见后端仓 `docs/_tech_graph/`）与 `tech_graph_contract_check.py` 与 `graph.json` 导出 **并行**，CI 可同 job 顺序跑、独立失败。
 - **task 草案**：工作区 `docs/tech_graph/tasks/ai-ink-brain-api-python/`、`docs/tech_graph/tasks/ai-ink-brain/` 分目录落盘（见 [tasks/README.md](../../tasks/README.md)）。
+- **承接仓规约片段（演进稿）**：`docs/tech_graph/spec/…`（与 `tasks/` 同型；见 [spec/README.md](../../spec/README.md)）。
 
 ## 仍待执行方补全
 

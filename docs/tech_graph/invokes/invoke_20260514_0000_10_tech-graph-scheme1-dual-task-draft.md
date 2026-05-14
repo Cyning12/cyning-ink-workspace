@@ -1,15 +1,17 @@
-# 已填需求帽 Prompt — tech_graph 方案1（双仓 task 初稿）
+# Harness invoke snapshot
 
-> **用途**：复制下方 **「§A 整段可复制正文」** 到 **新对话**，直接发起需求帽（`10-requirements`），**无需**再替换 `{{…}}`。  
-> **帽子真值**：[`docs/harness/prompts/10-requirements.md`](../../harness/prompts/10-requirements.md)；**调用模板母版**：[`docs/harness/prompts/TEMPLATE-requirements-invoke.md`](../../harness/prompts/TEMPLATE-requirements-invoke.md)。  
-> **规划真值**：[改进方向.md](../改进方向.md)（v1.1，含 R1～R4、闸口 A/B）。  
-> **落盘位置**：本文件在 **`docs/tech_graph/prompts/`**（专题内）；**勿**复制到 `docs/harness/prompts/`。
+| 字段 | 值 |
+|------|-----|
+| hat_id | 10 |
+| template | docs/tech_graph/prompts/PROMPT-filled-requirements-tech-graph-phase1-v1.md §A（已填需求帽 · tech_graph 方案1） |
+| task_paths | `ai-ink-brain-api-python/docs/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md` · `ai-ink-brain/content/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md` |
+| related_review_or_none | 无 |
+| created_utc_or_local | 2026-05-14（会话锚点） |
+| notes | 用户通过 @ 引用专题已填 Prompt；执行 Agent 按 §A 输出双仓 task 初稿与下一棒 Prompt |
 
----
+## 可复制 Prompt 快照（与发起体一致）
 
-## §A 整段可复制正文（从「你正在扮演」起复制到对话 user）
-
-~~~text
+```text
 你正在扮演工作区 Harness「需求与任务分析帽」，严格遵循：
 - docs/harness/prompts/10-requirements.md（身份、只做什么、禁止什么、输出形状、停止条件、交接物）
 - docs/harness/HARNESS_V2_PLAN.md 第 5 节（test_strategy、failure_paths、freeze_id 等）
@@ -36,25 +38,11 @@ AGENTS.md
 无
 
 你必须完成：
-0. **Invoke 快照（开帽起点）**：在输出下列第 1 条起的实质性结果之前，先将 **本用户消息全文** 按 `docs/tech_graph/invokes/README.md` 落盘到 `Projects/docs/tech_graph/invokes/`（含元数据表 + 快照 fenced code）。与 Harness 通目录分工见该 README。同一会话内追问不再新增快照文件。
-1. 输出两条 task 的结构化初稿（前端一条、后端一条），每条约含：建议文件名（如 `task_engineering_tech_graph_graph_json_export_v1.md`）、元信息表草案、各 Harness 字段。
+0. **Invoke 快照（开帽起点）**：在输出下列第 1 条起的实质性结果之前，先将 **本用户消息全文** 按 `docs/tech_graph/invokes/README.md` 落盘到 `Projects/docs/tech_graph/invokes/`（含元数据表 + 快照 fenced code）。同一会话内追问不再新增快照文件。
+1. 输出两条 task 的结构化初稿（前端一条、后端一条），每条约含：建议文件名、元信息表草案、各 Harness 字段。
 2. 在文末给出 **建议落盘路径**：后端 `ai-ink-brain-api-python/docs/tasks/active/`；前端 `ai-ink-brain/content/tasks/active/`（与各自 README 一致）。
 3. 文末再给一段 **下一棒可复制 Prompt**（执行帽或帽 20 复审），含本 invoke 快照路径占位，便于打回闭环。
 4. 禁止：写业务实现代码；改 CI YAML 正文；在 task 中写绝对本机路径。
 
 不强制你直接写文件；若用户随后明确要求落盘，再按第 2 步路径编辑。
-~~~
-
----
-
-## 修订记录
-
-| 日期 | 摘要 |
-|------|------|
-| 2026-05-14 | v1：已填需求帽正文，tech_graph 方案1 双仓 task 初稿 |
-| 2026-05-14 | v1.1：自 `docs/harness/prompts/` 迁至 `docs/tech_graph/prompts/`，与 Harness 通模分工 |
-| 2026-05-14 | v1.2：Invoke 快照改落 `docs/tech_graph/invokes/`（专题目录内） |
-
-## 给 Cursor
-
-`Harness`、`10-requirements`、`tech_graph`、`graph.json`、`R1`、`闸口 A`、`PROMPT-filled`
+```

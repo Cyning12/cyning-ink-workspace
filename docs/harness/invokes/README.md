@@ -23,6 +23,7 @@
 | 主 task 路径（相对 `Projects/`） | 建议快照目录 |
 |----------------------------------|--------------|
 | `ai-ink-brain-api-python/docs/tasks/**` | **`ai-ink-brain-api-python/docs/harness/invokes/`**（与 [`../reviews/README.md`](../reviews/README.md) 子仓落盘规则对称） |
+| `docs/tech_graph/**`（专题：graph.json / 三方案；子仓正式 task 仍在各仓 `docs/tasks` 或 `content/tasks`） | **`docs/tech_graph/invokes/`**（见 [`../../tech_graph/invokes/README.md`](../../tech_graph/invokes/README.md)） |
 | 其他（仅工作区级 task 等） | **`docs/harness/invokes/`**（本目录） |
 
 > **布局注意**：若工作区根 `.gitignore` **整路径忽略** 某子仓目录（嵌套独立 git、上层仓不收录其文件），则 **Git 可提交的真值** 仅为根目录 **`docs/harness/invokes/`**；仍建议在快照元信息 `task_paths` 中写清子仓 task 相对路径，语义上与「该子仓 task 开帽」一致。子仓内 `docs/harness/invokes/README.md`（若存在）供 **仅在子仓仓库内** 开发时对照。
@@ -93,6 +94,7 @@
 | 2026-05-14 | v1.1：§2 增补工作区 gitignore 子仓时的真值与「指针」说明 |
 | 2026-05-14 | v1.2：真值段声明与各 `TEMPLATE-*-invoke` §3 第 0 条 / 【五·附】对齐 |
 | 2026-05-15 | v1.3：工作区 **指针** 示例 [`pointer_invoke_chatbi_v3_task_audit_r2.md`](pointer_invoke_chatbi_v3_task_audit_r2.md)（子仓快照正文真值、上层链回） |
+| 2026-05-14 | v1.4：`§2` 增补 **`docs/tech_graph/invokes/`** 与 Harness 本目录分工 |
 
 ---
 
