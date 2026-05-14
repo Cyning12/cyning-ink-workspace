@@ -26,7 +26,7 @@
 | §3 帽子 | 本目录文件 | 说明 |
 |--------|------------|------|
 | 需求 / 任务分析 | [`10-requirements.md`](10-requirements.md) | 验收可观测、`failure_paths`、非范围、依赖链接；承接 **任务审核** 回填清单 |
-| **需求分析 · 调用模板** | [`TEMPLATE-requirements-invoke.md`](TEMPLATE-requirements-invoke.md) | 可复制 Prompt；占位符未替换则 **Agent 追问**；与 `10` 双向关联 |
+| **已填需求帽 · tech_graph 方案1（双仓 task 初稿）** | [`PROMPT-filled-requirements-tech-graph-phase1-v1.md`](PROMPT-filled-requirements-tech-graph-phase1-v1.md) | 无 `{{}}`；复制 §A 发起 `10`；与 `TEMPLATE-requirements-invoke` 同职责 |
 | 规格 / 任务审查 | [`20-review-spec-task.md`](20-review-spec-task.md) | 对话内缺口短评；契约变更标 **冻结点升级**；**不要求**每次写 `reviews/` |
 | **规格短评 · 调用模板** | [`TEMPLATE-review-spec-task-invoke.md`](TEMPLATE-review-spec-task-invoke.md) | 可复制 Prompt；占位符未替换则 **Agent 追问**；与 `20` 双向关联；书面审改用 `22` 模板 |
 | **任务审核** | [`22-task-audit.md`](22-task-audit.md) | **强制** [`../reviews/`](../reviews/README.md) 落盘；R1/R2… 闭环；**签收 / 关闭** = 任务终点点 |
@@ -59,7 +59,7 @@
 | 2026-05-14 | v1.6：增补 [`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md)；README 表与第 10 步链入 |
 | 2026-05-14 | v1.7：增补 [`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md)；第 10 步区分短版 / 全量 / EXAMPLE |
 | 2026-05-14 | v1.8：使用方式第 5 步 **Invoke 快照**；表增 [`../invokes/README.md`](../invokes/README.md)；与 `reviews` 互链 |
-| 2026-05-14 | v1.9：各 `TEMPLATE-*-invoke` §3 已内嵌 **第 0 条 / 【五·附】** 开帽落盘 invokes（与 `invokes/README` 一致） |
+| 2026-05-14 | v1.10：链 [`PROMPT-filled-requirements-tech-graph-phase1-v1.md`](PROMPT-filled-requirements-tech-graph-phase1-v1.md)；表增一行 |
 
 ---
 
