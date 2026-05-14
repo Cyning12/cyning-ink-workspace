@@ -42,7 +42,7 @@ Harness 帽子：独立复检（§一）+ 全局验收（§二）— 统一 Agen
 - AUDIT_REVIEW_PATH_OR_NONE：
   ai-ink-brain-api-python/docs/harness/reviews/task_chatbi_v3_sql_ast_and_prompt_injection_audit_R1_20260514.md
 - PR_OR_CI_OR_NONE：
-  无（task §6「PR / 分支」待回填；合并门禁以 GitHub PR 上 `pytest` workflow 与 task「给执行帽的必读列表」所列命令为准）
+  无（关单后仍以 GitHub `pytest` workflow 与 task「给执行帽的必读列表」所列命令为合并真值）
 
 【五、输入裁剪（防上下文爆炸）】
 - 优先：task 全文中的「验收标准」「failure_paths」「test_strategy」、task「### 自检结论（执行者）」、diff 或 `git show` 统计、pytest/CI 日志要点。
