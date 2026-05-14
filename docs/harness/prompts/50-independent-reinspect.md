@@ -72,7 +72,9 @@
 
 ## 关联模板（对话发起 · 可选）
 
-- **落盘可复制 Prompt**：[`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md)（**独立复检 / 全局验收 / 两者** 三选一；占位符与 **Agent 追问** 见模板 **§1**）。  
+- **落盘可复制 Prompt（短版 · 默认）**：[`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md)（**独立复检 / 全局验收 / 两者** 三选一；占位符与 **Agent 追问** 见模板 **§1**）。  
+- **落盘可复制 Prompt（全量 · 升级）**：[`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md)（结构化输出节、`failure_paths` / `test_strategy` 专节、子仓 checklist；占位符含可选 `PR_OR_CI`）。  
+- **已填示例**：[`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md)（ChatBI P1-1）。  
 - **Agent 行为**：若用户粘贴的调用体仍含 **`{{`**…**`}}`** 占位符，或 **`{{REINSPECT_MODE}}`** 非三选一字面，须 **先向用户追问**，**不得**输出「建议合并」类结论。
 
 ---
@@ -84,9 +86,10 @@
 | 2026-05-13 | v1：初版 |
 | 2026-05-13 | v1.1：复检输入假设链 task 自检结论与可选 reviews 签收 |
 | 2026-05-14 | v1.2：链 [`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md)；占位符未替换则 Agent 须追问 |
+| 2026-05-14 | v1.3：链全量模板 [`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md) 与 [`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md) |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`帽子`、`复检`、`freeze_id`、`验收`、`拒开工`、`test_strategy`、`prompts`、`自检结论`、`reviews`、`TEMPLATE-independent-reinspect-invoke`、`占位符`
+`Harness`、`帽子`、`复检`、`freeze_id`、`验收`、`拒开工`、`test_strategy`、`prompts`、`自检结论`、`reviews`、`TEMPLATE-independent-reinspect-invoke`、`TEMPLATE-independent-reinspect-invoke-full`、`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1`、`占位符`

@@ -3,7 +3,8 @@
 > **用途**：复制下文 **§3 可复制 Prompt 正文** 到对话，替换 **§2 占位符** 后发起 **`50`**：**§一 独立复检** 与/或 **§二 全局验收**（人签 checklist 辅助）。  
 > **帽子真值**：[`50-independent-reinspect.md`](50-independent-reinspect.md)（复检输入裁剪、输出形状、全局验收禁止项）。  
 > **前置**：task 内 **`### 自检结论（执行者）`** 应已存在（见 [`40-self-check.md`](40-self-check.md)、[`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md)）；缺失则复检帽须在 **阻塞项** 首条写明。  
-> **可选输入**：终轮任务审核 **`签收 / 关闭`** 节路径（`docs/harness/reviews/` 或子仓 `…/harness/reviews/` 下 `*_audit_*.md`）。
+> **可选输入**：终轮任务审核 **`签收 / 关闭`** 节路径（`docs/harness/reviews/` 或子仓 `…/harness/reviews/` 下 `*_audit_*.md`）。  
+> **全量升级（可选）**：需要结构化输出节（`failure_paths` 逐项、`test_strategy` 专节、按子仓 checklist、PR 小结等）时，改用 [`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md)；占位符已填示例见 [`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md)。**§3 短版仍为默认轻量入口**，全量模板不替代短版与 `50` 正文。
 
 ---
 
@@ -68,14 +69,25 @@
 
 ---
 
-## 4. 修订记录
+## 4. 与全量模板的关系（升级落盘）
+
+| 版本 | 文件 | 何时用 |
+|------|------|--------|
+| 短版（默认） | 本文 **§3** | token 紧、仅需 hat 级指令与最小输出条款 |
+| 全量（升级） | [`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md) **§3** | 需要 **A～D 输出节**、`failure_paths` / `test_strategy` 专节、按 `SUBPROJECT_ROOT` 拆 checklist、可选 `PR_OR_CI` |
+| 已填示例 | [`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md) | ChatBI P1-1；由全量模板复制后替换占位符 |
+
+---
+
+## 5. 修订记录
 
 | 日期 | 摘要 |
 |------|------|
 | 2026-05-14 | v1：与 `50-independent-reinspect` 关联；MODE 三选一；占位符未替换则 Agent 追问 |
+| 2026-05-14 | v1.1：链全量模板 `TEMPLATE-independent-reinspect-invoke-full` 与 EXAMPLE；增 **§4 关系表** |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`TEMPLATE-independent-reinspect-invoke`、`50-independent-reinspect`、`复检`、`全局验收`、`自检结论`、`reviews`、`占位符`、`追问`
+`Harness`、`TEMPLATE-independent-reinspect-invoke`、`TEMPLATE-independent-reinspect-invoke-full`、`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1`、`50-independent-reinspect`、`复检`、`全局验收`、`自检结论`、`reviews`、`占位符`、`追问`

@@ -16,7 +16,7 @@
 7. **快速发起规格短评（`20`）**：复制 [`TEMPLATE-review-spec-task-invoke.md`](TEMPLATE-review-spec-task-invoke.md) **§3** 并替换 **§2**；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `20-review-spec-task.md` **关联模板**）；须 **书面签收** 时改用第 5 步 **`22` 模板**。  
 8. **快速发起执行（`30`）**：复制 [`TEMPLATE-execute-invoke.md`](TEMPLATE-execute-invoke.md) **§3** 正文并替换 **§2** 占位符；若占位符未替换，**Agent 须追问**，不得开工写业务代码（见模板 **§1** 与 `30-execute-code.md`）。  
 9. **快速发起自检（`40`）**：复制 [`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md) **§3** 并替换 **§2**；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `40-self-check.md` **关联模板**）；须在 task 中落 **`### 自检结论（执行者）`**。  
-10. **快速发起独立复检 / 全局验收（`50`）**：复制 [`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md) **§3** 并替换 **§2**；**`{{REINSPECT_MODE}}`** 须为 **`独立复检`** / **`全局验收`** / **`两者`** 之一；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `50-independent-reinspect.md` **关联模板**）。
+10. **快速发起独立复检 / 全局验收（`50`）**：复制 [`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md) **§3**（**短版 · 默认**）并替换 **§2**；**`{{REINSPECT_MODE}}`** 须为 **`独立复检`** / **`全局验收`** / **`两者`** 之一；占位符未替换则 **Agent 须追问**（见模板 **§1** 与 `50-independent-reinspect.md`）。**全量升级（可选）**：[`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md) **§3**（结构化输出、`failure_paths` / `test_strategy` 专节、子仓 checklist、可选 `PR_OR_CI`）。**已填示例**：[`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md)。
 
 ---
 
@@ -35,6 +35,8 @@
 | **自检 · 调用模板** | [`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md) | 可复制 Prompt；占位符未替换则 **Agent 追问**；与 `40` 双向关联；回填 `### 自检结论` |
 | 自检（执行者） | [`40-self-check.md`](40-self-check.md) | 运行 task 所列命令；**回填** `### 自检结论（执行者）` |
 | **独立复检 / 全局验收 · 调用模板** | [`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md) | 可复制 Prompt；MODE 三选一；占位符未替换则 **Agent 追问**；与 `50` 双向关联 |
+| **独立复检 / 全局验收 · 全量调用模板（升级）** | [`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md) | 短版之上 v2；A～D 输出节、`PR_OR_CI` 可选；与短模板 **§4 关系表** 互链 |
+| **独立复检 + 全局验收 · 已填示例** | [`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md) | ChatBI P1-1；由全量模板复制后替换占位符 |
 | 独立复检 | [`50-independent-reinspect.md`](50-independent-reinspect.md)（前半） | diff + 日志 + 验收表；pass/fail + 证据 |
 | 全局验收 | [`50-independent-reinspect.md`](50-independent-reinspect.md)（后半节） | `freeze_id` + 人签 checklist |
 
@@ -52,9 +54,11 @@
 | 2026-05-14 | v1.3：增补 [`TEMPLATE-execute-invoke.md`](TEMPLATE-execute-invoke.md）；使用方式第 6 步 |
 | 2026-05-14 | v1.4：增补 [`TEMPLATE-requirements-invoke.md`](TEMPLATE-requirements-invoke.md)、[`TEMPLATE-review-spec-task-invoke.md`](TEMPLATE-review-spec-task-invoke.md)；使用方式第 6～8 步 |
 | 2026-05-14 | v1.5：增补 [`TEMPLATE-self-check-invoke.md`](TEMPLATE-self-check-invoke.md)、[`TEMPLATE-independent-reinspect-invoke.md`](TEMPLATE-independent-reinspect-invoke.md)；使用方式第 9～10 步 |
+| 2026-05-14 | v1.6：增补 [`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md`](EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1.md)；README 表与第 10 步链入 |
+| 2026-05-14 | v1.7：增补 [`TEMPLATE-independent-reinspect-invoke-full.md`](TEMPLATE-independent-reinspect-invoke-full.md)；第 10 步区分短版 / 全量 / EXAMPLE |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`prompts`、`帽子`、`HARNESS_V2_PLAN` §3、`拒开工`、`test_strategy`、`failure_paths`、`freeze_id`、`docs/harness/tasks`、`22-task-audit`、`reviews`、`签收`、`自检结论`、`TEMPLATE-task-audit-invoke`、`TEMPLATE-requirements-invoke`、`TEMPLATE-review-spec-task-invoke`、`TEMPLATE-execute-invoke`、`TEMPLATE-self-check-invoke`、`TEMPLATE-independent-reinspect-invoke`、`占位符`
+`Harness`、`prompts`、`帽子`、`HARNESS_V2_PLAN` §3、`拒开工`、`test_strategy`、`failure_paths`、`freeze_id`、`docs/harness/tasks`、`22-task-audit`、`reviews`、`签收`、`自检结论`、`TEMPLATE-task-audit-invoke`、`TEMPLATE-requirements-invoke`、`TEMPLATE-review-spec-task-invoke`、`TEMPLATE-execute-invoke`、`TEMPLATE-self-check-invoke`、`TEMPLATE-independent-reinspect-invoke`、`TEMPLATE-independent-reinspect-invoke-full`、`EXAMPLE-invoke-independent-reinspect-both-chatbi-p1-1`、`占位符`
