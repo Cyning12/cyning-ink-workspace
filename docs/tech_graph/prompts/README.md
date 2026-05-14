@@ -16,6 +16,8 @@
 | 文件 / 目录 | 用途 |
 | --- | --- |
 | [PROMPT-filled-requirements-tech-graph-phase1-v1.md](./PROMPT-filled-requirements-tech-graph-phase1-v1.md) | 需求帽：方案1 双仓 task 初稿（已填，复制 §A）；Invoke 落 [`../invokes/`](../invokes/) |
+| [TEMPLATE-accept-tech-graph-graph-json-backend-invoke.md](./TEMPLATE-accept-tech-graph-graph-json-backend-invoke.md) | 验收帽：后端 `graph.json` scheme1 任务关闭（替换 `{{PR_URL}}` 等后复制正文） |
+| [TEMPLATE-accept-tech-graph-graph-json-frontend-invoke.md](./TEMPLATE-accept-tech-graph-graph-json-frontend-invoke.md) | 验收帽：前端 `graph.json` scheme1 任务关闭（替换 `{{PR_URL}}` 等后复制正文） |
 | [`../invokes/`](../invokes/) | 本专题 **Invoke 快照**（与 `docs/harness/invokes/` 分工见该 README） |
 
 ## 命名建议
