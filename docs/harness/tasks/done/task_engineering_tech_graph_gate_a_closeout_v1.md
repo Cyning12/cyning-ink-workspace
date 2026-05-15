@@ -125,6 +125,14 @@
 
 ---
 
+### 修订记录
+
+| 日期 | 摘要 |
+|------|------|
+| 2026-05-15 | **按审查 R4 回填**：`task_engineering_tech_graph_gate_a_closeout_v1_audit_R4_20260515.md`（零阻塞签收）；invoke：`docs/harness/invokes/invoke_20260515_1830_22_tech-graph-gate-a-closeout-audit-r4.md`。 |
+
+---
+
 ## 给 Cursor
 
 `gate_a`、`graph.json`、`quality`、`LLM`、`§3.2`、`freeze_id`、`docs/harness/tasks`
