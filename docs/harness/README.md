@@ -10,6 +10,7 @@
 | [reviews/README.md](reviews/README.md) | **任务审核产出**：每轮审查必落盘；闭环 R1/R2…；**签收 / 关闭** 与 task 状态对齐 |
 | [invokes/README.md](invokes/README.md) | **新帽节 Invoke 快照**：每帽首次发起时落盘已替换占位符的 §3 调用体；与 `reviews/`、task 自检并列可追溯 |
 | [Harness工程测评-Desktop-Projects-ai-ink.md](Harness工程测评-Desktop-Projects-ai-ink.md) | Ink 全栈三方测评（Inform/Constrain/Verify）；**§8** 为 P0 CI 落地对照；**2026-05-14** 起含远端 PR 与任务收口补充 |
+| [SDD_HAT_FLOW.md](SDD_HAT_FLOW.md) | **SDD 与帽子编号流程**：10→…→50 推荐链、**22 签收 vs 50 可选**、**40 与 22 分工**、审核/实现两类 **打回** 回流示例 |
 
 **入口**：根目录 [`README.md`](../../README.md)（**cyning-ink-workspace**）、[`AGENTS.md`](../../AGENTS.md) **§8**。
 
@@ -27,3 +28,4 @@
 | 2026-05-14 | v1.6：`40` / `50` 调用模板 [`prompts/TEMPLATE-self-check-invoke.md`](prompts/TEMPLATE-self-check-invoke.md)、[`prompts/TEMPLATE-independent-reinspect-invoke.md`](prompts/TEMPLATE-independent-reinspect-invoke.md)；索引表链六模板 |
 | 2026-05-14 | v1.7：[`invokes/README.md`](invokes/README.md)（新帽节 Prompt 快照约定与 `reviews` 互链） |
 | 2026-05-15 | v1.8：Invoke 快照 **首份示例** 落盘（子仓 `ai-ink-brain-api-python/docs/harness/invokes/` + 工作区 [`invokes/pointer_invoke_chatbi_v3_task_audit_r2.md`](invokes/pointer_invoke_chatbi_v3_task_audit_r2.md) 指针） |
+| 2026-05-15 | v1.9：[`SDD_HAT_FLOW.md`](SDD_HAT_FLOW.md)（帽子数字链、22/50/40 关系、打回流） |
