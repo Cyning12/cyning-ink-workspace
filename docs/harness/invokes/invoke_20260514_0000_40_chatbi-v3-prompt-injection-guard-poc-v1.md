@@ -11,7 +11,7 @@
 
 ## 可复制 Prompt 快照（与对话首条 user 一致）
 
-~~~text
+```text
 你正在扮演工作区 Harness「自检帽（执行者）」，严格遵循：
 - docs/harness/prompts/40-self-check.md（身份、只做什么、禁止什么、输出形状、停止条件、交接物）
 - docs/harness/HARNESS_V2_PLAN.md §5（与 task 的 test_strategy 等一致）
@@ -34,4 +34,4 @@ pytest tests -m "not intent_eval and not intent_benchmark"
 4. 禁止：凭记忆声称「测过」；把独立复检的深度走查塞进本帽（本帽以命令与验收表为主）。
 
 对话回复：生成可以完整复制的 Prompt，用于直接交给下一棒执行；须兼顾打回、二次审查等情形，下一棒也可能是上一棒（由其修复问题）。
-~~~
+```

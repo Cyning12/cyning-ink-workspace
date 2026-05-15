@@ -49,7 +49,7 @@
 
 ## 4. 文件正文结构（建议复制本骨架再贴 Prompt）
 
-```markdown
+````markdown
 # Harness invoke snapshot
 
 | 字段 | 值 |
@@ -63,10 +63,10 @@
 
 ## 可复制 Prompt 快照（与对话首条 user 一致）
 
-~~~text
+```text
 （整段粘贴 §3 已替换占位符后的正文）
-~~~
 ```
+````
 
 ---
 
@@ -95,6 +95,7 @@
 | 2026-05-14 | v1.2：真值段声明与各 `TEMPLATE-*-invoke` §3 第 0 条 / 【五·附】对齐 |
 | 2026-05-15 | v1.3：工作区 **指针** 示例 [`pointer_invoke_chatbi_v3_task_audit_r2.md`](pointer_invoke_chatbi_v3_task_audit_r2.md)（子仓快照正文真值、上层链回） |
 | 2026-05-14 | v1.4：`§2` 增补 **`docs/tech_graph/invokes/`** 与 Harness 本目录分工 |
+| 2026-05-15 | v1.5：§4 嵌套示例外层改为四反引号围栏；内层快照由波浪线三围栏改为标准三个反引号加 `text` 信息串，与常见 Markdown 渲染器习惯一致。 |
 
 ---
 

@@ -9,7 +9,7 @@
 
 ## §A 整段可复制正文（从「你正在扮演」起复制到对话 user）
 
-~~~text
+```text
 你正在扮演工作区 Harness「需求与任务分析帽」，严格遵循：
 - docs/harness/prompts/10-requirements.md（身份、只做什么、禁止什么、输出形状、停止条件、交接物）
 - docs/harness/HARNESS_V2_PLAN.md 第 5 节（test_strategy、failure_paths、freeze_id 等）
@@ -43,7 +43,7 @@ AGENTS.md
 4. 禁止：写业务实现代码；改 CI YAML 正文；在 task 中写绝对本机路径。
 
 不强制你直接写文件；若用户随后明确要求落盘，再按第 2 步路径编辑。
-~~~
+```
 
 ---
 

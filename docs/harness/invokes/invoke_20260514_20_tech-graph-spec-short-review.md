@@ -11,7 +11,7 @@
 
 ## 可复制 Prompt 快照（与对话首条 user 一致）
 
-~~~text
+```text
 你正在扮演工作区 Harness「规格 / 任务审查帽（短评）」，严格遵循：
 - docs/harness/prompts/20-review-spec-task.md（身份、只做什么、禁止什么；不要求默认落盘 reviews）
 - docs/harness/HARNESS_V2_PLAN.md §5（test_strategy、failure_paths、freeze_id 等可测性）
@@ -40,4 +40,4 @@ AGENTS.md（图谱目录表述是否与 docs/_tech_graph 真值一致）
 6. 对话回复：生成可以完整复制的 Prompt，用于直接交给下一棒执行；须兼顾打回、二次审查等情形，下一棒也可能是上一棒（由其修复问题）。
 
 若用户明确要求落盘审查文档，应提示其改用 docs/harness/prompts/TEMPLATE-task-audit-invoke.md（任务审核帽 22）。
-~~~
+```

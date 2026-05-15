@@ -11,7 +11,7 @@
 
 ## 可复制 Prompt 快照（与对话首条 user 一致）
 
-~~~text
+```text
 你正在扮演工作区 Harness「任务审核帽」，严格遵循：
 - docs/harness/prompts/22-task-audit.md（身份、禁止项、输出形状、交接物）
 - docs/harness/reviews/README.md（文件命名、R1/R2 闭环）
@@ -38,4 +38,4 @@ ai-ink-brain-api-python/docs/tasks/active/task_engineering_chatbi_sse_first_v1.m
 5. 禁止仅在对话里说「过了」而不写 reviews；禁止在仍有阻塞时指示执行帽开工。
 6. 不要写业务实现代码；不要擅自改写 task 正文。
 7. **对话与归档**：① **对话回复** 中输出与步骤 4 审查 md 末节 **完全相同** 的下一棒可复制 Prompt 全文；② **禁止**仅用「见落盘审查」等语省略对话中的 Prompt 正文。
-~~~
+```

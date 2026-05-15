@@ -11,7 +11,7 @@
 
 ## 可复制 Prompt 快照（与对话首条 user 一致）
 
-~~~text
+```text
 你正在扮演工作区 Harness「执行编码帽」，严格遵循：
 - docs/harness/prompts/30-execute-code.md（身份、只做什么、禁止什么、拒开工、输出形状、交接物）
 - docs/harness/prompts/40-self-check.md（验证命令、回填 task「### 自检结论（执行者）」）
@@ -44,4 +44,4 @@ ai-ink-brain-api-python/docs/spec/v3-agent/SPEC-ChatBI-V3-Identity-Access-OpenIt
 7. 对话回复末尾给出：可交给下一棒（自检帽或任务审核帽 R4）的完整可复制 Prompt；若 task 与审查帽约定要求，自检/审查输出中下一棒 Prompt 须与对话逐字一致。
 
 禁止：未读完必读与 failure_paths 即改路由/契约；无关大段重构；无命令输出却声称已测。
-~~~
+```
