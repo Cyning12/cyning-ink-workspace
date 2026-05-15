@@ -3,7 +3,7 @@
 ## 元信息
 
 | 项 | 内容 |
-|----|------|
+| --- | --- |
 | **关联 task** | `docs/harness/tasks/done/task_engineering_tech_graph_gate_a_closeout_v1.md` |
 | **轮次** | R4（链回 [`task_engineering_tech_graph_gate_a_closeout_v1_audit_R3_20260515.md`](./task_engineering_tech_graph_gate_a_closeout_v1_audit_R3_20260515.md)） |
 | **审查日期** | 2026-05-15 |
@@ -19,7 +19,7 @@
 
 - **PR #26**：已 **合并**至远端默认分支（此前 R3 为 `OPEN` / `mergedAt: null` 的阻塞已解除）。  
 - **PR 描述 pytest 续链**：已满足 R3 硬条件（描述中含 **`.github/workflows/pytest.yml` / `pytest`** 之 **Actions run URL（含数字 id）**；task **§6 实现备忘**已记录 **merge commit `53bae076`** 与 **pytest** run **`25905249428`**（`pull_request` 与 PR head 对齐））。  
-- **父文档快照（子仓）**：`gate_a_scheme1_backend.md`「仓库或 CI 快照引用」在 **`b1d499d`** 中已更新为 **PR #26 已合并** 并链 **pytest** [run **25905248066**](https://github.com/Cyning12/ai-ink-brain-api-python/actions/runs/25905248066)（`push` / `888e86a`；与 R3 选用 **同一 workflow 名 `pytest`**，与 PR 描述中 **`25905249428`** 为 **不同触发事件**之两条留痕，**不**构成签收冲突，以 **PR 描述 + 父文档各写其真值** 为可接受策略）。  
+- **父文档快照（子仓）**：`gate_a_scheme1_backend.md`「仓库或 CI 快照引用」在 **`b1d499d`** 中已更新为 **PR #26 已合并** 并链 **pytest** [Actions run 25905248066](https://github.com/Cyning12/ai-ink-brain-api-python/actions/runs/25905248066)（`push` / `888e86a`；与 R3 选用 **同一 workflow 名 `pytest`**，与 PR 描述中 **`25905249428`** 为 **不同触发事件**之两条留痕，**不**构成签收冲突，以 **PR 描述 + 父文档各写其真值** 为可接受策略）。  
 - **Harness 主 task 归档**：头部 **`done（2026-05-15 验收通过）`**；物理路径在 **`docs/harness/tasks/done/`**；**`_views/done.md`** / **`_views/in_progress.md`** 已与 `docs/harness/tasks/README.md` **硬规则**一致（见主 task 与视图文件）。  
 - **与 HARNESS_V2_PLAN §5**：`test_strategy: recommended` 与 **`test_strategy_note`** 仍成立；`failure_paths` 仍可操作化；未写 **`gates_before_code`** 仍为可选，**非**阻塞。
 
@@ -28,7 +28,7 @@
 ## 阻塞 / 非阻塞
 
 | 类型 | 说明 |
-|------|------|
+| --- | --- |
 | **阻塞** | **无**（相对 R3 所列硬条件，均已解除或与书面真值对齐）。 |
 | **非阻塞** | `failure_paths` 未列「可重试」列仍为 **Harness 建议增强**（同 R3），**不**影响本轮 **零阻塞签收**。 |
 
@@ -37,7 +37,7 @@
 ## 需任务帽回填清单（若有）
 
 | # | 项 | 建议位置 / 动作 |
-|---|-----|----------------|
+| --- | --- | --- |
 | — | **无硬性回填项**。可选：在 task 尾部或「修订记录」增一行 **「按审查 R4 回填」** 指向本文件，便于 SDD 链环检索。 | `docs/harness/tasks/done/task_engineering_tech_graph_gate_a_closeout_v1.md` |
 
 ---
@@ -69,5 +69,6 @@
 ## 修订记录
 
 | 日期 | 摘要 |
-|------|------|
+| --- | --- |
 | 2026-05-15 | R4：零阻塞签收；链 R3；记 invoke_snapshot |
+| 2026-05-15 | 排版勘误：修复误嵌套反引号与 pytest Actions 链接 Markdown |
