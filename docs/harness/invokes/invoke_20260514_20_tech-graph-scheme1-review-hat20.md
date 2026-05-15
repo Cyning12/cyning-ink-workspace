@@ -4,11 +4,13 @@
 |------|-----|
 | hat_id | 20 |
 | template | docs/harness/prompts/20-review-spec-task.md（规格/任务审查短评） |
-| task_paths | ai-ink-brain-api-python/docs/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md；ai-ink-brain/content/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md |
+| task_paths | ai-ink-brain-api-python/docs/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md；ai-ink-brain/content/tasks/done/task_engineering_tech_graph_graph_json_export_v1.md |
 | related_specs | docs/tech_graph/SPEC/json_graph/scheme_1_graph_json.md；docs/tech_graph/改进方向.md |
 | related_review_or_none | 无（帽 20 默认不落盘 reviews） |
 | created_utc_or_local | 2026-05-14（会话落盘） |
 | notes | 双仓 task + 工作区 SPEC/规划；占位符已替换 |
+
+> **路径勘误（2026-05-15）**：前端 `task_engineering_tech_graph_graph_json_export_v1.md` 已归档至 **`ai-ink-brain/content/tasks/done/`**；本文件元数据 `task_paths` 与 fenced 快照内原 `active/` 路径已替换为 `done/`，避免断链。
 
 ## 可复制 Prompt 快照（与对话首条 user 一致）
 
@@ -23,7 +25,7 @@
 docs/tech_graph/SPEC/json_graph/scheme_1_graph_json.md
 docs/tech_graph/改进方向.md
 ai-ink-brain-api-python/docs/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md
-ai-ink-brain/content/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md
+ai-ink-brain/content/tasks/done/task_engineering_tech_graph_graph_json_export_v1.md
 
 【评审侧重点（无则写「无」）】
 test_strategy 为 required 时：pytest / golden / `--check` 是否具备可失败自动化计划或等价可执行说明；前后端 task 与 scheme_1、freeze_id、闸口 A 是否一致；前端复用后端脚本时 cwd / 两仓 CI 检出假设是否写清；与 tech_graph_contract_check / manifest 并行边界是否仍无歧义。

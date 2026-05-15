@@ -4,10 +4,12 @@
 |------|-----|
 | hat_id | 10 |
 | template | docs/tech_graph/prompts/PROMPT-filled-requirements-tech-graph-phase1-v1.md §A（已填需求帽 · tech_graph 方案1） |
-| task_paths | `ai-ink-brain-api-python/docs/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md` · `ai-ink-brain/content/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md` |
+| task_paths | `ai-ink-brain-api-python/docs/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md` · `ai-ink-brain/content/tasks/done/task_engineering_tech_graph_graph_json_export_v1.md` |
 | related_review_or_none | 无 |
 | created_utc_or_local | 2026-05-14（会话锚点） |
 | notes | 用户通过 @ 引用专题已填 Prompt；执行 Agent 按 §A 输出双仓 task 初稿与下一棒 Prompt |
+
+> **路径勘误（2026-05-15）**：`task_engineering_tech_graph_graph_json_export_v1.md` 前端真值已迁至 **`ai-ink-brain/content/tasks/done/`**；元数据 `task_paths` 内原 `active/` 已替换为 `done/`（初稿仍常落 `active/`，与本条已验收 task 不冲突）。
 
 ## 可复制 Prompt 快照（与发起体一致）
 

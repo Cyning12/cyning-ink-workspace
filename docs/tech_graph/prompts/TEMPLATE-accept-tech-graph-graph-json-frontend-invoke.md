@@ -10,7 +10,7 @@
 
 - [ ] `{{PR_URL}}`、`{{TARGET_BRANCH}}` 已替换为真实值。  
 - [ ] `{{MERGE_COMMIT_OR_RUN_ID}}` 已替换或整段删除（可选）。  
-- [ ] 子仓 task 路径仍为：`ai-ink-brain/content/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md`。
+- [ ] 子仓 task 路径仍为：`ai-ink-brain/content/tasks/done/task_engineering_tech_graph_graph_json_export_v1.md`。
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## 必读真值（前端仓内）
 
-- Task 全文：`ai-ink-brain/content/tasks/active/task_engineering_tech_graph_graph_json_export_v1.md`（重点 §4 验收、§5 failure_paths、§9 实现备忘）。
+- Task 全文：`ai-ink-brain/content/tasks/done/task_engineering_tech_graph_graph_json_export_v1.md`（重点 §4 验收、§5 failure_paths、§9 实现备忘）。
 - 实现备忘应已填：**脚本** `tools/export_graph_json.py`；**CI** `.github/workflows/quality.yml`（job `lint-and-build`：`pnpm install` 之后、`pnpm lint` 之前含 `actions/setup-python@v5` 与 `python3 tools/export_graph_json.py --input docs/_tech_graph --output docs/_tech_graph/graph.json --check`；**cwd** = 仓根）；**一键检查** `pnpm tech-graph:graph-check`；**闸口 A** 指针见 task §9（规划「对比实验门闸」节或独立 md，以备忘为准）。
 - **非范围（勿按后端验收）**：本仓 **不**验收 `_contract_manifest` / `tech_graph_contract_check`（task 已声明）。
 
