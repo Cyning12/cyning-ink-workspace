@@ -16,7 +16,7 @@
   - **有阻塞** 时：写 **阻塞项**、**建议回填位置**（task 小节标题）、**交给任务帽的清单**（逐条可勾选）。  
 - 若本轮有阻塞且已由 **任务帽** 完成回填：在 **新一轮** 审查文档中对比 **diff / 更新后的 task 片段**，写 **R2/R3…** 结论。  
 - 在 **最终通过** 的审查文档中撰写 **「签收 / 关闭」** 节：声明 **本 task 可结束** 或 **须继续的条件**；此为 **任务正式结束点**（与 task 头部 `done` 对齐）。  
-- 按 **「交接物」**：在 **对话回复** 中输出 **可完整复制的下一棒 Prompt 全文**（占位符已替换）；**须**将同一全文写入审查 md 末节 **「下一棒可复制 Prompt」**（`text` 代码围栏；与对话逐字一致，见 **输出形状** §2）。
+- 按 **「交接物」**：**有下一棒** 时在对话与审查 md 输出 **「下一棒可复制 Prompt」**；**终轮签收、无下一棒** 时改输出 **「执行路线与 Commit 回溯」**（见 [`HANDOFF_CLOSE_TRACE.md`](HANDOFF_CLOSE_TRACE.md)），**省略** Prompt 小节。
 
 ## 禁止什么
 
@@ -36,7 +36,7 @@
 ## 输出形状
 
 1. **文件**：`task_<slug>_audit_R<轮次>_YYYYMMDD.md`；相对路径为 **`docs/harness/reviews/`** 或 **`ai-ink-brain-api-python/docs/harness/reviews/`**（与 task 所在仓一致；轮次规则见 reviews README）。  
-2. **文内结构**（建议）：**元信息**（关联 task、轮次）→ **审查结论摘要** → **阻塞 / 非阻塞** → **需任务帽回填清单**（若有）→ **是否建议执行帽开工** → **签收 / 关闭**（仅终轮或明确「不可关闭」时写死结论）→ **下一棒可复制 Prompt**（独立小节标题；使用 Markdown **代码围栏**且语言标为 **`text`**，内为已替换占位符的下一棒 §3 全文；模板选用与「交接物」一致，**禁止**仅用「见对话」等占位语代替块内正文）。
+2. **文内结构**（建议）：**元信息** → **审查结论摘要** → **阻塞 / 非阻塞** → **需任务帽回填清单**（若有）→ **是否建议执行帽开工** → **签收 / 关闭** → **二选一收尾**：**「下一棒可复制 Prompt」**（`text` 围栏，有下一棒时）或 **「执行路线与 Commit 回溯」**（终轮无下一棒时，见 [`HANDOFF_CLOSE_TRACE.md`](HANDOFF_CLOSE_TRACE.md)）；与对话逐字/语义一致。
 
 ## 停止条件
 
@@ -44,7 +44,7 @@
 
 ## 交接物
 
-- **必有**：（1）审查 md 的**相对工作区根**路径（含子仓 `ai-ink-brain-api-python/docs/harness/reviews/` 若适用）+ 文内 **「给下一棒」** 一句 + 文末 **「下一棒可复制 Prompt」** 小节（`text` 代码围栏内为 **已替换占位符** 的下一棒 §3 全文，与（2）逐字一致）；（2）**对话中**输出 **可完整复制的下一棒 Prompt 全文**——按本轮结论选用 [`TEMPLATE-requirements-invoke.md`](TEMPLATE-requirements-invoke.md)（回填 task）、[`TEMPLATE-execute-invoke.md`](TEMPLATE-execute-invoke.md)（无阻塞可开工）、[`TEMPLATE-task-audit-invoke.md`](TEMPLATE-task-audit-invoke.md)（R+1 再审）等之 **§3**，**占位符须全部替换**；使下一棒或返修上一棒可直接粘贴开新会话执行，并兼顾打回、二次审查及 **下一棒也可能是上一棒**（与各 `TEMPLATE-*-invoke` §3 末尾「对话回复」约定一致）。  
+- **必有**：（1）审查 md **相对工作区根**路径 + 收尾小节二选一 —— **有下一棒**：文末 **「下一棒可复制 Prompt」** + 对话同文；选用 [`TEMPLATE-requirements-invoke`](TEMPLATE-requirements-invoke.md) / [`TEMPLATE-execute-invoke`](TEMPLATE-execute-invoke.md) / [`TEMPLATE-task-audit-invoke`](TEMPLATE-task-audit-invoke.md) 等 §3，占位符须全部替换。**无下一棒（终轮签收）**：文末 **「执行路线与 Commit 回溯」** + 对话同表（[`HANDOFF_CLOSE_TRACE.md`](HANDOFF_CLOSE_TRACE.md)）；**不得**用空 Prompt 代替。  
 - **建议**：本轮开帽时若已落盘 **Invoke 快照**（见 [`../invokes/README.md`](../invokes/README.md)），在审查文元信息表记 **`invoke_snapshot`** 链回该路径。  
 - **若有回填**：给任务帽的 **逐条清单**（复制进对话 + 指明 task 路径）；回填完成后 **必须触发新一轮本帽** 产出 `R+1` 文档。  
 - **自动 commit**：完成（1）（2）且审查 md 已落盘后，按 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) 在相关 git 根分别 commit（仅本轮路径；对话末尾报 short-hash）。用户写明 **「本轮不要 commit」** 可豁免。
@@ -62,9 +62,10 @@
 | 2026-05-15 | v1.4：交接物 **必有** 增补对话中 **下一棒可复制 Prompt 全文**（链各 `TEMPLATE-*-invoke` §3） |
 | 2026-05-15 | v1.5：输出形状与「交接物」对齐——审查 md **须**含 **「下一棒可复制 Prompt」** 小节，与对话输出逐字一致 |
 | 2026-05-17 | v1.6：交接物链 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) |
+| 2026-05-17 | v1.7：终轮无下一棒 → [`HANDOFF_CLOSE_TRACE.md`](HANDOFF_CLOSE_TRACE.md) 执行路线与 commit 回溯 |
 
 ---
 
 ## 给 Cursor
 
-`Harness`、`任务审核`、`reviews`、`_audit_`、`签收`、`闭环`、`任务帽`、`10-requirements`、`docs/harness/tasks`、`TEMPLATE-task-audit-invoke`、`TEMPLATE-requirements-invoke`、`TEMPLATE-execute-invoke`、`下一棒可复制 Prompt`、`占位符`、`invokes`、`invoke_snapshot`、`ai-ink-brain-api-python/docs/harness/reviews`
+`Harness`、`任务审核`、`reviews`、`_audit_`、`签收`、`闭环`、`HANDOFF_CLOSE_TRACE`、`执行路线与 Commit 回溯`、`任务帽`、`10-requirements`、`docs/harness/tasks`、`TEMPLATE-task-audit-invoke`、`TEMPLATE-requirements-invoke`、`TEMPLATE-execute-invoke`、`下一棒可复制 Prompt`、`占位符`、`invokes`、`invoke_snapshot`、`ai-ink-brain-api-python/docs/harness/reviews`

@@ -2,7 +2,8 @@
 
 > **适用范围**：凡在 **本轮对话** 中产出 **「下一棒可复制 Prompt」**（及各帽子 **交接物** 要求的同内容落盘）的 **所有 Harness 帽子**（`10` / `20` / `22` / `30` / `40` / `50` 及对应 `TEMPLATE-*-invoke`）。  
 > **真值层级**：本文件为 **Guides**；与 [`HARNESS_V2_PLAN.md`](../HARNESS_V2_PLAN.md) §3 并列；**不替代** CI。  
-> **用户显式豁免**：用户在本轮消息中写明 **「本轮不要 commit」** 或 **「仅草稿不落盘」** 时，**跳过**本章 commit 义务（仍须完成 Prompt 与约定落盘）。
+> **用户显式豁免**：用户在本轮消息中写明 **「本轮不要 commit」** 或 **「仅草稿不落盘」** 时，**跳过**本章 commit 义务（仍须完成 Prompt 与约定落盘）。  
+> **流程关闭（无下一棒）**：不产出下一棒 Prompt；改按 [`HANDOFF_CLOSE_TRACE.md`](HANDOFF_CLOSE_TRACE.md) 输出 **执行路线与 Commit 回溯**（本轮落盘仍须 commit）。
 
 ---
 
@@ -101,9 +102,10 @@ docs(harness): 22 R2 任务审核落盘与下一棒 30 执行 invoke
 | 日期 | 摘要 |
 |------|------|
 | 2026-05-17 | v1：初版 — 下一棒 Prompt 后自动 commit 通则 |
+| 2026-05-17 | v1.1：互链 [`HANDOFF_CLOSE_TRACE.md`](HANDOFF_CLOSE_TRACE.md)（无下一棒分支） |
 
 ---
 
 ## 给 Cursor
 
-`HANDOFF_AUTO_COMMIT`、`下一棒可复制 Prompt`、`自动 commit`、`reviews`、`invokes`、`分仓提交`、`禁止 git add -A`
+`HANDOFF_AUTO_COMMIT`、`HANDOFF_CLOSE_TRACE`、`下一棒可复制 Prompt`、`自动 commit`、`reviews`、`invokes`、`分仓提交`、`禁止 git add -A`

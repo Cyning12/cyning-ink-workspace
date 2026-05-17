@@ -65,8 +65,8 @@
 6. 若 task 声明 freeze_id：核对 PR 变更是否在冻结基准内；契约升级是否在 SPEC/task 显式记录。
 7. 输出 checklist 表（项 / 状态 / 签注栏「待人工」）；不伪造已签核；不跳过 CI 红灯叙事。
 
-对话回复：生成可以完整复制的 Prompt，用于直接交给下一棒执行；须兼顾打回、二次审查等情形，下一棒也可能是上一棒（由其修复问题）。
-8. **自动 commit**：在输出下一棒 Prompt 且本轮复检报告/invoke 已落盘后，按 docs/harness/prompts/HANDOFF_AUTO_COMMIT.md 分仓 commit。仅对话、零文件变更则不必空提交；用户写明「不要 commit」则跳过。
+对话回复：若建议合并且无返工 → 输出「执行路线与 Commit 回溯」（docs/harness/prompts/HANDOFF_CLOSE_TRACE.md），勿编造下一棒 Prompt；若须打回 → 输出下一棒可复制 Prompt（含打回、二次审查、上一棒修复）。
+8. **自动 commit**：落盘后按 docs/harness/prompts/HANDOFF_AUTO_COMMIT.md 分仓 commit。仅对话、零文件变更则不必空提交；用户写明「不要 commit」则跳过。
 ```
 
 ---

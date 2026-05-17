@@ -34,7 +34,8 @@
 ### 交接物
 
 - 给合并决策者：**是否建议合并** + 阻塞项清单。  
-- 若输出 **下一棒可复制 Prompt** 且本轮有落盘报告/invoke：按 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) 分仓 commit（用户写明 **「本轮不要 commit」** 可豁免）。
+- **有返工下一棒**：输出 **下一棒可复制 Prompt** + [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md)。  
+- **建议合并且无下一棒**：输出 **「执行路线与 Commit 回溯」**（[`HANDOFF_CLOSE_TRACE.md`](HANDOFF_CLOSE_TRACE.md)），含本 task 相关分仓 commit 列表。
 
 ---
 
@@ -68,7 +69,7 @@
 ### 交接物
 
 - 可贴 PR 的 **验收小结**（供维护者 sign-off）。  
-- 若输出 **下一棒可复制 Prompt** 且本轮有落盘：按 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) 分仓 commit（用户写明 **「本轮不要 commit」** 可豁免）。
+- 流程关闭时：对话 **「执行路线与 Commit 回溯」**（[`HANDOFF_CLOSE_TRACE.md`](HANDOFF_CLOSE_TRACE.md)）；有落盘则 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md)。
 
 ---
 
