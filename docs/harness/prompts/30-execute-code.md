@@ -33,7 +33,8 @@
 ## 交接物
 
 - 可合并的 commit/PR；**自检** 命令输出要点；需要时附上 **图谱或 task 变更** 说明。  
-- **自检结论** 由 **自检帽** 写入 task 固定小节（见 `40-self-check.md`）；执行帽须在 PR / 对话中 **引用该小节路径**，不得仅口头宣称完成。
+- **自检结论** 由 **自检帽** 写入 task 固定小节（见 `40-self-check.md`）；执行帽须在 PR / 对话中 **引用该小节路径**，不得仅口头宣称完成。  
+- 若通过 [`TEMPLATE-execute-invoke.md`](TEMPLATE-execute-invoke.md) 输出 **下一棒可复制 Prompt** 且本轮实现已落盘：按 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) 在子仓 git 根 commit（用户写明 **「本轮不要 commit」** 可豁免）。
 
 ---
 

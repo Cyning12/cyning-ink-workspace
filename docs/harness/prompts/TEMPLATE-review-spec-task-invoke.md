@@ -49,6 +49,7 @@
 4. 契约变更须提示冻结点升级（freeze_id 或等价基准）。
 5. 禁止：输出完整改写版 SPEC（除非用户明确要求「修订草案」）；在缺 failure_paths 或验收不可执行时写「可开工」。
 6. 对话回复：生成可以完整复制的 Prompt，用于直接交给下一棒执行；须兼顾打回、二次审查等情形，下一棒也可能是上一棒（由其修复问题）。
+7. **自动 commit**：在输出下一棒 Prompt 后，若本轮有 invoke 等磁盘变更，按 docs/harness/prompts/HANDOFF_AUTO_COMMIT.md 分仓 commit；仅对话、零文件变更则不必空提交。用户写明「不要 commit」则跳过。
 
 若用户明确要求落盘审查文档，应提示其改用 docs/harness/prompts/TEMPLATE-task-audit-invoke.md（任务审核帽 22）。
 ```

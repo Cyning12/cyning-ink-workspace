@@ -33,7 +33,8 @@
 
 ### 交接物
 
-- 给合并决策者：**是否建议合并** + 阻塞项清单。
+- 给合并决策者：**是否建议合并** + 阻塞项清单。  
+- 若输出 **下一棒可复制 Prompt** 且本轮有落盘报告/invoke：按 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) 分仓 commit（用户写明 **「本轮不要 commit」** 可豁免）。
 
 ---
 
@@ -66,7 +67,8 @@
 
 ### 交接物
 
-- 可贴 PR 的 **验收小结**（供维护者 sign-off）。
+- 可贴 PR 的 **验收小结**（供维护者 sign-off）。  
+- 若输出 **下一棒可复制 Prompt** 且本轮有落盘：按 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) 分仓 commit（用户写明 **「本轮不要 commit」** 可豁免）。
 
 ---
 

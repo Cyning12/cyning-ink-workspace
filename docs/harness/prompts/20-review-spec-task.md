@@ -49,7 +49,8 @@
   - **（2）文内呈现**：在对话中设独立小节标题 **「下一棒可复制 Prompt」**；围栏内正文与（1）**逐字一致**（**禁止**仅用「见上文」等占位语代替块内正文）。  
 - **给需求帽**：需回填的字段清单（可复制进对话 + 指明 SPEC/task **相对路径**）。  
 - **给执行帽**：若零阻塞，一句 **「审查通过，可按 task 执行」** 并附须满足的 **门闸提醒**（如先写测试）；且 **不得**省略上文 **（1）（2）** 的 Prompt 块。  
-- **与 `22` 的差异（留痕）**：本帽**不**强制把「下一棒可复制 Prompt」写入 `docs/harness/reviews/*.md`；若本轮已按 [`TEMPLATE-review-spec-task-invoke.md`](TEMPLATE-review-spec-task-invoke.md) §3 第 **0** 条落盘 **Invoke 快照**（见 [`../invokes/README.md`](../invokes/README.md)），**建议**在快照元数据或追加小节中 **链回**「下一棒可复制 Prompt」所在对话轮次说明，或在用户明确要求留痕时，将同一块正文写入用户指定的 `docs/harness/` 下 md 并在交接物中 **声明相对路径**。
+- **与 `22` 的差异（留痕）**：本帽**不**强制把「下一棒可复制 Prompt」写入 `docs/harness/reviews/*.md`；若本轮已按 [`TEMPLATE-review-spec-task-invoke.md`](TEMPLATE-review-spec-task-invoke.md) §3 第 **0** 条落盘 **Invoke 快照**（见 [`../invokes/README.md`](../invokes/README.md)），**建议**在快照元数据或追加小节中 **链回**「下一棒可复制 Prompt」所在对话轮次说明，或在用户明确要求留痕时，将同一块正文写入用户指定的 `docs/harness/` 下 md 并在交接物中 **声明相对路径**。  
+- **自动 commit**：完成 **（1）（2）** 且本轮有磁盘变更（如 invoke / 用户授权 task 编辑）时，按 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) 分仓 commit；**仅对话、零文件变更** 则不必空提交。
 
 ---
 

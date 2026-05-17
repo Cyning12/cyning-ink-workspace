@@ -106,6 +106,7 @@ Harness 帽子：独立复检（§一）+ 全局验收（§二）— 统一 Agen
 - §二：checklist 机器项填满；人签标「待人工」。
 
 对话回复：生成可以完整复制的 Prompt，用于直接交给下一棒执行；须兼顾打回、二次审查等情形，下一棒也可能是上一棒（由其修复问题）。
+9. **自动 commit**：在输出下一棒 Prompt 且本轮复检/验收报告已落盘后，按 docs/harness/prompts/HANDOFF_AUTO_COMMIT.md 分仓 commit。仅对话、零文件变更则不必空提交；用户写明「不要 commit」则跳过。
 ```
 
 ---

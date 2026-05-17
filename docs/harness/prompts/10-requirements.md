@@ -41,7 +41,8 @@
 ## 交接物
 
 - 可粘贴进子仓 `task_*.md` 或 harness `docs/harness/tasks/active/` 的正文块；并注明建议 `test_strategy` 取值（`required` / `recommended` / `not_applicable` + `test_strategy_note`）。  
-- 若由审查驱动：**更新后的 task 路径** + **下一轮任务审核帽** 应读取的 `reviews` 文件名。
+- 若由审查驱动：**更新后的 task 路径** + **下一轮任务审核帽** 应读取的 `reviews` 文件名。  
+- 若本轮输出 **「下一棒可复制 Prompt」** 且已写入 task / invoke 等文件：按 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) 分仓 commit（用户写明 **「本轮不要 commit」** 可豁免）。
 
 ---
 

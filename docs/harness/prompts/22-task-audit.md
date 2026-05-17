@@ -46,7 +46,8 @@
 
 - **必有**：（1）审查 md 的**相对工作区根**路径（含子仓 `ai-ink-brain-api-python/docs/harness/reviews/` 若适用）+ 文内 **「给下一棒」** 一句 + 文末 **「下一棒可复制 Prompt」** 小节（`text` 代码围栏内为 **已替换占位符** 的下一棒 §3 全文，与（2）逐字一致）；（2）**对话中**输出 **可完整复制的下一棒 Prompt 全文**——按本轮结论选用 [`TEMPLATE-requirements-invoke.md`](TEMPLATE-requirements-invoke.md)（回填 task）、[`TEMPLATE-execute-invoke.md`](TEMPLATE-execute-invoke.md)（无阻塞可开工）、[`TEMPLATE-task-audit-invoke.md`](TEMPLATE-task-audit-invoke.md)（R+1 再审）等之 **§3**，**占位符须全部替换**；使下一棒或返修上一棒可直接粘贴开新会话执行，并兼顾打回、二次审查及 **下一棒也可能是上一棒**（与各 `TEMPLATE-*-invoke` §3 末尾「对话回复」约定一致）。  
 - **建议**：本轮开帽时若已落盘 **Invoke 快照**（见 [`../invokes/README.md`](../invokes/README.md)），在审查文元信息表记 **`invoke_snapshot`** 链回该路径。  
-- **若有回填**：给任务帽的 **逐条清单**（复制进对话 + 指明 task 路径）；回填完成后 **必须触发新一轮本帽** 产出 `R+1` 文档。
+- **若有回填**：给任务帽的 **逐条清单**（复制进对话 + 指明 task 路径）；回填完成后 **必须触发新一轮本帽** 产出 `R+1` 文档。  
+- **自动 commit**：完成（1）（2）且审查 md 已落盘后，按 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) 在相关 git 根分别 commit（仅本轮路径；对话末尾报 short-hash）。用户写明 **「本轮不要 commit」** 可豁免。
 
 ---
 
@@ -60,6 +61,7 @@
 | 2026-05-14 | v1.3：交接物增 **Invoke 快照** 与 `invoke_snapshot` 元信息建议链 |
 | 2026-05-15 | v1.4：交接物 **必有** 增补对话中 **下一棒可复制 Prompt 全文**（链各 `TEMPLATE-*-invoke` §3） |
 | 2026-05-15 | v1.5：输出形状与「交接物」对齐——审查 md **须**含 **「下一棒可复制 Prompt」** 小节，与对话输出逐字一致 |
+| 2026-05-17 | v1.6：交接物链 [`HANDOFF_AUTO_COMMIT.md`](HANDOFF_AUTO_COMMIT.md) |
 
 ---
 
