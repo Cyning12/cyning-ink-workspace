@@ -4,7 +4,7 @@
 
 | 项 | 内容 |
 |----|------|
-| **关联 task** | `docs/harness/tasks/active/task_engineering_tech_graph_gate_a_closeout_v1.md` |
+| **关联 task** | [`docs/harness/tasks/done/task_engineering_tech_graph_gate_a_closeout_v1.md`](../tasks/done/task_engineering_tech_graph_gate_a_closeout_v1.md)（审查时曾为 `active/`） |
 | **轮次** | R1 |
 | **审查日期** | 2026-05-15 |
 | **invoke_snapshot** | 无（本轮用户未提供已落盘 Invoke §3 快照路径） |

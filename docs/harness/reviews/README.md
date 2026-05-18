@@ -17,6 +17,21 @@
 
 路径：**工作区根** 下为 `docs/harness/reviews/<文件名>.md`；**后端仓** 下为 `ai-ink-brain-api-python/docs/harness/reviews/<文件名>.md`（见上「子仓落盘」）。
 
+### 本目录指针索引（工作区 · 链向子仓真值）
+
+| 指针文件 | 子仓 task（当前路径） |
+|----------|------------------------|
+| [`pointer_…_graph_query_v1_audit_R1_20260517.md`](pointer_task_engineering_tech_graph_v2_graph_query_v1_audit_R1_20260517.md) | `ai-ink-brain-api-python/docs/tasks/done/task_engineering_tech_graph_v2_graph_query_v1.md` |
+| [`pointer_…_graph_query_v1_audit_R2_20260517.md`](pointer_task_engineering_tech_graph_v2_graph_query_v1_audit_R2_20260517.md) | 同上 |
+| [`pointer_…_p4_extended_v1_audit_CLOSE_20260517.md`](pointer_task_engineering_tech_graph_v2_p4_extended_v1_audit_CLOSE_20260517.md) | `…/done/task_engineering_tech_graph_v2_p4_extended_v1.md` |
+| [`pointer_…_p4_bc_followup_v1_audit_CLOSE_20260517.md`](pointer_task_engineering_tech_graph_v2_p4_bc_followup_v1_audit_CLOSE_20260517.md) | `…/done/task_engineering_tech_graph_v2_p4_bc_followup_v1.md` |
+| [`pointer_…_gate_a_perf_compare_v1_audit_R2_20260515.md`](pointer_task_engineering_tech_graph_gate_a_perf_compare_v1_audit_R2_20260515.md) | `…/done/task_engineering_tech_graph_gate_a_perf_compare_v1.md` |
+| ChatBI 系列 `task_chatbi_*_audit_*.md`（本目录） | 正文在 `ai-ink-brain-api-python/docs/harness/reviews/` |
+
+**工作区 Harness task**（非子仓）：[`task_engineering_tech_graph_gate_a_closeout_v1_audit_R*.md`](task_engineering_tech_graph_gate_a_closeout_v1_audit_R4_20260515.md) → [`../tasks/done/task_engineering_tech_graph_gate_a_closeout_v1.md`](../tasks/done/task_engineering_tech_graph_gate_a_closeout_v1.md)。
+
+> 已归档子仓 task 一律链 **`docs/tasks/done/`**；勿再写 `active/`（历史审查正文中的流程叙述除外）。
+
 ---
 
 ## 闭环流程（审核 → 回填 → 再审）
@@ -40,6 +55,7 @@
 | 2026-05-14 | v1.3：**子仓落盘**：`ai-ink-brain-api-python` 的 `docs/harness/reviews/` 为后端 task 审核全文真值；本目录可存指针 |
 | 2026-05-14 | v1.4：链 **Invoke 快照** 总规 [`../invokes/README.md`](../invokes/README.md)；审查元信息可记 `invoke_snapshot` |
 | 2026-05-14 | v1.5：闭环第 6 步 **Invoke 快照** 与审查双锚点 |
+| 2026-05-18 | v1.6：指针索引；子仓 task 链 `done/`；补 P2-4 CLOSE 指针 |
 
 ---
 

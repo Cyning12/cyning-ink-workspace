@@ -4,7 +4,7 @@
 
 | 项 | 内容 |
 |----|------|
-| **关联 task** | `docs/harness/tasks/active/task_engineering_tech_graph_gate_a_closeout_v1.md` |
+| **关联 task** | [`docs/harness/tasks/done/task_engineering_tech_graph_gate_a_closeout_v1.md`](../tasks/done/task_engineering_tech_graph_gate_a_closeout_v1.md)（审查时曾为 `active/`） |
 | **轮次** | R3（链回 [`task_engineering_tech_graph_gate_a_closeout_v1_audit_R2_20260515.md`](./task_engineering_tech_graph_gate_a_closeout_v1_audit_R2_20260515.md)） |
 | **审查日期** | 2026-05-15 |
 | **invoke_snapshot** | `docs/harness/invokes/invoke_20260515_1630_22_tech-graph-gate-a-closeout-audit-r3.md`（本轮任务审核帽 22 开帽） |

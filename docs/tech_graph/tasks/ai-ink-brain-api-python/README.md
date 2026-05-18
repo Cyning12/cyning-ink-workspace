@@ -7,5 +7,7 @@
 | 文档 | 说明 |
 | --- | --- |
 | [machine_track_architecture_draft_zh.md](../../spec/ai-ink-brain-api-python/machine_track_architecture_draft_zh.md) | 机器轨分层、G-END、规范层边界 |
-| 子仓 task（**done**） | `ai-ink-brain-api-python/docs/tasks/done/task_engineering_tech_graph_v2_p4_extended_v1.md`（P2-4a · freeze `V2_2` · 2026-05-17） |
-| 子仓 task（**done**） | `ai-ink-brain-api-python/docs/tasks/done/task_engineering_tech_graph_v2_graph_query_v1.md`（graph_v2 + query + 闸口 B） |
+| 子仓 task（**done**） | [`task_engineering_tech_graph_v2_graph_query_v1.md`](../../../../ai-ink-brain-api-python/docs/tasks/done/task_engineering_tech_graph_v2_graph_query_v1.md)（P2-0～3 · 方案2 · 闸口 B） |
+| 子仓 task（**done**） | [`task_engineering_tech_graph_v2_p4_extended_v1.md`](../../../../ai-ink-brain-api-python/docs/tasks/done/task_engineering_tech_graph_v2_p4_extended_v1.md)（P2-4a · freeze `V2_2`） |
+| 子仓 task（**done**） | [`task_engineering_tech_graph_v2_p4_bc_followup_v1.md`](../../../../ai-ink-brain-api-python/docs/tasks/done/task_engineering_tech_graph_v2_p4_bc_followup_v1.md)（P2-4b/4c follow-up） |
+| 工作区指针 | [`docs/harness/reviews/README.md`](../../../../docs/harness/reviews/README.md) §指针索引 |
