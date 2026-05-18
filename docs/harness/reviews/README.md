@@ -27,6 +27,7 @@
 | [`pointer_…_p4_bc_followup_v1_audit_CLOSE_20260517.md`](pointer_task_engineering_tech_graph_v2_p4_bc_followup_v1_audit_CLOSE_20260517.md) | `…/done/task_engineering_tech_graph_v2_p4_bc_followup_v1.md` |
 | [`pointer_…_gate_a_perf_compare_v1_audit_R2_20260515.md`](pointer_task_engineering_tech_graph_gate_a_perf_compare_v1_audit_R2_20260515.md) | `…/done/task_engineering_tech_graph_gate_a_perf_compare_v1.md` |
 | ChatBI 系列 `task_chatbi_*_audit_*.md`（本目录） | 正文在 `ai-ink-brain-api-python/docs/harness/reviews/` |
+| [`pointer_…_vercel_ai_sdk_main_stream_v1_audit_R1_20260520.md`](pointer_task_frontend_vercel_ai_sdk_main_stream_v1_audit_R1_20260520.md) | `ai-ink-brain/content/tasks/active/task_frontend_vercel_ai_sdk_main_stream_v1.md` |
 
 **工作区 Harness task**（非子仓）：[`task_engineering_tech_graph_gate_a_closeout_v1_audit_R*.md`](task_engineering_tech_graph_gate_a_closeout_v1_audit_R4_20260515.md) → [`../tasks/done/task_engineering_tech_graph_gate_a_closeout_v1.md`](../tasks/done/task_engineering_tech_graph_gate_a_closeout_v1.md)。
 
