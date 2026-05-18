@@ -64,6 +64,17 @@
 8. **自动 commit**：完成步骤 3–7 后，按 docs/harness/prompts/HANDOFF_AUTO_COMMIT.md 在相关 git 根分别 commit（仅本轮路径；对话末尾一行报 short-hash）。用户本轮写明「不要 commit」则跳过。
 ```
 
+### 影响分析（可选 · 方案2）
+
+当 task 涉及架构模块变更且后端子仓已升 **graph_v2** 时，审查者可 **可选** 执行：
+
+```text
+cd ai-ink-brain-api-python
+python tools/tech_graph_graph_query.py describe-impact <node_id> 2
+```
+
+将输出摘要写入审查 md「非阻塞」或 task `impact` 字段；**非** §3 硬阻塞步骤。
+
 ---
 
 ## 4. 修订记录
