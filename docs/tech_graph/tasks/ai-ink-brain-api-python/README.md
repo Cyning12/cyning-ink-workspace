@@ -7,6 +7,7 @@
 | 文档 | 说明 |
 | --- | --- |
 | [machine_track_architecture_draft_zh.md](../../spec/ai-ink-brain-api-python/machine_track_architecture_draft_zh.md) | 机器轨分层、G-END、规范层边界 |
+| 子仓 task（**active**） | [`task_engineering_tech_graph_gate_c_v2_dual_track_v1.md`](../../../../ai-ink-brain-api-python/docs/tasks/active/task_engineering_tech_graph_gate_c_v2_dual_track_v1.md)（**闸口 C** · graph_v2 查询 vs 双轨原文） |
 | 子仓 task（**done**） | [`task_engineering_tech_graph_scheme2_completion_v1.md`](../../../../ai-ink-brain-api-python/docs/tasks/done/task_engineering_tech_graph_scheme2_completion_v1.md)（方案2 API/文档补全 · PR #31） |
 | 子仓 task（**done**） | [`task_engineering_tech_graph_v2_graph_query_v1.md`](../../../../ai-ink-brain-api-python/docs/tasks/done/task_engineering_tech_graph_v2_graph_query_v1.md)（P2-0～3 · 方案2 · 闸口 B） |
 | 子仓 task（**done**） | [`task_engineering_tech_graph_v2_p4_extended_v1.md`](../../../../ai-ink-brain-api-python/docs/tasks/done/task_engineering_tech_graph_v2_p4_extended_v1.md)（P2-4a · freeze `V2_2`） |
